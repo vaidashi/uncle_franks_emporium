@@ -75,6 +75,25 @@
      text-decoration: none;
  }
 
+ .footerbar {
+     text-align: center;
+     overflow: hidden;
+     background-color: #111;
+     position: fixed; /* Set the navbar to fixed position */
+     bottom: 0;
+     width: 100%; /* Full width */
+ }
+
+
+ .footerbar a {
+     font-size: 16px;
+     color: #f2f2f2;
+     padding: 14px 16px;
+     text-decoration: none;
+ }
+
+
+
  .circleimg {
     border-radius: 50%;
  }
