@@ -1,5 +1,18 @@
 <div class="headerbar"> <a> UNKIE FRANKS EMPOOORIUM </a> </div>
 
+<div class="dropdown userbtn">
+  <button onclick="openDropdown()" class="dropbtn">
+    <div class="menudiv"></div>
+    <div class="menudiv"></div>
+    <div class="menudiv"></div>
+  </button>
+  <div id="UserMenu" class="dropdown-content">
+    <a href="#">Log In</a>
+    <a href="#">Create Account</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
 <div id="mySidenav" class="sidenav">
   <a> <%= image_tag 'uncle_frank.jpg', size: '150x150', class: 'shake circleimg' %> <a/>
   <a href="#">About</a>
@@ -14,4 +27,30 @@
 </div>
 
 
+
+
 <div class="footerbar"> <a> THIS IS A FOOTER </a> </div>
+
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function openDropdown() {
+    document.getElementById("UserMenu").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
