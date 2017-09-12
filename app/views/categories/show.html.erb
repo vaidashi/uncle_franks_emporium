@@ -1,0 +1,10 @@
+<h1>Category Show Page</h1>
+
+
+<ul>
+  <% @category.items.each do |item| %>
+    <p>  <%= item.name %> </p>
+    <p>  <%= item.price %> </p>
+    <%= image_tag item.image_path, class: "itemimage" %>
+  <% end  %>
+</ul>
