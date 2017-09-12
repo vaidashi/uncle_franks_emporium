@@ -1,19 +1,18 @@
 language: ruby
 
 rvm:
-  - 2.3
+  - "2.3"
 
-# addons:
-#   firefox: "38.0.5" # Set Firefox Version if needed.
-
-
-before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-
-script:
-  - bin/rake db:migrate RAILS_ENV=test
-  - rspec
+env:
+  - DB=mysql
+  
+script: 
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+before_script:
+  - mysql -e 'create database myapp_test'
+bundler_args: --binstubs=./bundler_stubs
 
 # 5. OPTIONAL Add a Build Status Badge to your README, follow instructions here:
 #    http://docs.travis-ci.com/user/status-images/
@@ -26,3 +25,4 @@ script:
 # Custom build task: http://docs.travis-ci.com/user/customizing-the-build/
 # GUI, Browsers, xvfb: http://docs.travis-ci.com/user/gui-and-headless-browsers/
 # Build Status Badge for README: http://docs.travis-ci.com/user/status-images/
+
