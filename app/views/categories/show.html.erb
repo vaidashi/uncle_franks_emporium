@@ -2,10 +2,9 @@
 
 
 <ul>
-  <% @items.each do |item| %>
-
-  <%= item.name %>
-  <%= item.price %>
-  <%= image_tag item.image_path, class: "itemimage" %>
+  <% @category.items.each do |item| %>
+    <p>  <%= item.name %> </p>
+    <p>  <%= item.price %> </p>
+    <%= image_tag item.image_path, class: "itemimage" %>
   <% end  %>
 </ul>

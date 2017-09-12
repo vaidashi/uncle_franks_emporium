@@ -219,7 +219,6 @@
         null,
         1,
         2,
-        2,
         null,
         null,
         null
@@ -231,6 +230,7 @@
       ],
       "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/items_controller.rb": [
         1,
+        null,
         1,
         1,
         null,
@@ -238,6 +238,6 @@
         null
       ]
     },
-    "timestamp": 1505256692
+    "timestamp": 1505256843
   }
 }
