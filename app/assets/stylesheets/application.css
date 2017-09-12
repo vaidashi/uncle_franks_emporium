@@ -14,9 +14,18 @@
  *= require_self
  */
 
+
+ .title {
+   text-align: center;
+   color: black;
+   font-size: 28px;
+   text-decoration: none;
+   text-shadow: 1px 0px black;
+ }
+
  /* The side navigation menu */
  .sidenav {
-     height: 70%; /* 100% Full-height */
+     height: 100%; /* 100% Full-height */
      width: 300; /* 0 width - change this with JavaScript */
      position: fixed; /* Stay in place */
      z-index: 1; /* Stay on top */
@@ -45,12 +54,12 @@
 
  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
  #main {
-     transition: margin-left .5s;
-     padding: 20px;
-     margin-top: 30px;
+    padding-top: 40px;
+    padding-left: 200px;
  }
 
- .navbar {
+ .headerbar {
+     text-align: center;
      overflow: hidden;
      background-color: #111;
      position: fixed; /* Set the navbar to fixed position */
@@ -59,21 +68,24 @@
  }
 
  /* Links inside the navbar */
- .navbar a {
-     float: right;
-     display: flex;
+ .headerbar a {
+     font-size: 32px;
      color: #f2f2f2;
-     text-align: right;
      padding: 14px 16px;
      text-decoration: none;
  }
 
- img:hover {
+ .circleimg {
+    border-radius: 50%;
+ }
+
+ .shake:hover {
     /* Start the shake animation and make the animation complete in 0.5 seconds */
     animation: shake 0.5s;
     /* When the animation is complete, start again */
     animation-iteration-count: infinite;
 }
+
 
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
