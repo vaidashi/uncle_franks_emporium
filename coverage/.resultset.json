@@ -184,6 +184,8 @@
         null,
         1,
         null,
+        1,
+        null,
         null
       ],
       "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/helpers/application_helper.rb": [
@@ -198,8 +200,21 @@
         1,
         1,
         null
+      ],
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/items_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1505249801
+    "timestamp": 1505251347
   }
 }

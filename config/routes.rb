@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 # root 'welcome#index'
 get '/', :to => 'welcome#index', :as => 'welcome'
 
+resources :items, only: [:index]
+
 end
