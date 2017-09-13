@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="headerbar"> <a> UNCLE FRANK'S EMPORIUM </a> <a><%= link_to "Cart", cart_path %></a></div>
+    <div class="headerbar"> <a> UNCLE FRANK'S EMPORIUM </a><% if current_user %> Logged In as <%= current_user.username %><% end %><%=  %> <a><%= link_to "Cart", cart_path %></a></div>
 
     <div class="dropdown userbtn">
       <button onclick="openDropdown()" class="dropbtn">
@@ -19,7 +19,11 @@
         <div class="menudiv"></div>
       </button>
       <div id="UserMenu" class="dropdown-content">
-        <a href="#">Log In</a>
+        <% if current_user %>
+          <%= link_to "Logout", logout_path, method: :delete %>
+        <% else %>
+          <%= link_to "Log In", login_path %>
+        <% end %>
         <a href="#">Create Account</a>
         <a href="#">Link 3</a>
       </div>
