@@ -5,6 +5,6 @@
   <% @category.items.each do |item| %>
     <p>  <%= item.name %> </p>
     <p>  <%= item.price %> </p>
-    <%= image_tag item.image_path, class: "itemimage" %>
+    <%= image_tag item.image_path, class: "itemimage", size: "400x300" %>
   <% end  %>
 </ul>
