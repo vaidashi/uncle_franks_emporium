@@ -13,10 +13,15 @@
 
   <body>
 
+    <% if @cart.item_count %>
+    <div class="cart-count"> <%= @cart.item_count %> </div>
+    <% end %>
+
     <ul id="dropdown1" class="dropdown-content">
       <li>User information here</li>
       <li>Login</li>
     </ul>
+
     <nav>
       <div class="nav-wrapper black">
         <a href="#!" class="brand-logo center small">Uncle Frank's Trash Emporium</a>
