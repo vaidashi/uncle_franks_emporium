@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  include ActionView::Helpers::TextHelper
 
   def index
     @items = @cart.all_items
@@ -14,5 +15,14 @@ class CartsController < ApplicationController
     flash[:notice] = "Successfully added #{item.name}."
 
     redirect_to item_path(item)
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+    @cart.remove_item(item.id)
+    session[:cart] = @cart.contents
+    item_link = "<%= link_to item.name, item_path(item) %>"
+    flash[:remove_item] = %Q[Successfully removed <a href="#{item_path(item)}"> #{item.name} </a> from your cart].html_safe
+    redirect_to cart_path
   end
 end

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
 
   get '/cart', to: "carts#index", as: "cart"
+  delete '/cart/:id', to: "carts#destroy", as: "cart_remove_item"
   get '/:category_name', to: 'categories#show'
 
 end
