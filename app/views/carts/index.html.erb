@@ -1,0 +1,10 @@
+<h1>Your Cart</h1>
+
+<% @items.each do |item, count| %>
+<p> <%= item.name %> </p>
+<p> <%= item.description %> </p>
+<p> <%= item.price %> </p>
+<p> <%= item.image_path %> </p>
+<p> <%= count %> </p>
+<% end %>
+<p>Your total is:<%= @total %> </p>

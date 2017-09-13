@@ -16,7 +16,7 @@ feature "When a visitor adds an item to their cart" do
     visit item_path(item)
 
     click_on "Add to Cart"
-    # click_on "Add to Cart"
+    click_on "Add to Cart"
 
     click_on "Cart"
 
@@ -26,7 +26,6 @@ feature "When a visitor adds an item to their cart" do
     expect(page).to have_content(item.price)
     expect(page).to have_content(item.image_path)
     expect(page).to have_content(total_price)
-
   end
 
 end
