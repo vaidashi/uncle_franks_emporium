@@ -6,6 +6,14 @@ class CartsController < ApplicationController
     @total = @cart.total
   end
 
+  def update
+    item = Item.find(params[:id])
+    @cart.add_item(item.id)
+    session[:cart] = @cart.contents
+    flash[:notice] = "Successfully added a #{item.name} to your cart."
+    redirect_to cart_path
+  end
+
   def create
     item = Item.find(params[:item_id])
 

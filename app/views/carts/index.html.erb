@@ -5,8 +5,9 @@
 <p> <%= item.description %> </p>
 <p> <%= item.price %> </p>
 <p> <%= item.image_path %> </p>
-<p> <%= count %> </p>
+<p> <%= "Quantity: #{count}" %> </p>
 <br />
+<%= link_to 'Add item', cart_add_item_path(item), method: :put, class: 'AddBtn' %>
 <%= link_to 'Remove', cart_remove_item_path(item), method: :delete, class: 'RemoveBtn' %>
 <% end %>
 <p>Your total is:<%= @total %> </p>
