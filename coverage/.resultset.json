@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/environment.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/application.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/application.rb": [
         1,
         null,
         1,
@@ -41,12 +41,12 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/boot.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/environments/test.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/environments/test.rb": [
         1,
         null,
         null,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/application_controller_renderer.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -100,7 +100,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/assets.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/backtrace_silencers.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -125,20 +125,20 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/cookies_serializer.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/inflections.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -156,13 +156,13 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/mime_types.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/wrap_parameters.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -178,7 +178,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/routes.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/routes.rb": [
         1,
         null,
         1,
@@ -197,27 +197,27 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/helpers/application_helper.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/item.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/application_record.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/item.rb": [
         1,
         1,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/category.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/category.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/items_controller.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/items_controller.rb": [
         1,
         1,
         null,
@@ -237,7 +237,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/application_controller.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -248,7 +248,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/cart.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/cart.rb": [
         1,
         1,
         null,
@@ -283,7 +283,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/carts_controller.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/carts_controller.rb": [
         1,
         1,
         null,
@@ -321,7 +321,7 @@
         null,
         null
       ],
-      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/categories_controller.rb": [
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/categories_controller.rb": [
         null,
         null,
         1,
@@ -333,6 +333,6 @@
         null
       ]
     },
-    "timestamp": 1505334972
+    "timestamp": 1505337736
   }
 }
