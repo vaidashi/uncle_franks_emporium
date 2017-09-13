@@ -11,3 +11,9 @@
 <%= link_to 'Remove item', cart_remove_item_path(item), method: :delete, class: 'RemoveBtn' %>
 <% end %>
 <p>Your total is:<%= @total %> </p>
+
+<% if current_user %>
+<%= link_to "Checkout" %>
+<% else %>
+<%= link_to "Login or Create Account to Checkout", login_path %>
+<% end %>
