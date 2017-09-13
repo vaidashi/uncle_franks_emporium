@@ -1,0 +1,11 @@
+<h1>Item Show Page: <%= @item.name %></h1>
+
+
+<ul>
+    <p>  <%= @item.name %> </p>
+    <p>  <%= @item.description %> </p>
+    <p>  <%= @item.price %> </p>
+    <p>  <%= @item.category %> </p>
+    <%= image_tag @item.image_path, class: "itemimage" %>
+    <%= button_to "Add to Cart", carts_path(item_id: @item.id), class: "btn btn-danger" %>
+</ul>

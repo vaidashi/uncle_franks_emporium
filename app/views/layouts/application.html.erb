@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <div class="headerbar"> <a> UNCLE FRANK'S EMPOREUM </a> </div>
+    <div class="headerbar"> <a> UNCLE FRANK'S EMPORIUM </a> <a><%= link_to "Cart", cart_path %></a></div>
 
     <div class="dropdown userbtn">
       <button onclick="openDropdown()" class="dropbtn">
@@ -34,7 +34,9 @@
     </div>
 
     <div class="footerbar"> <a> THIS IS A FOOTER </a> </div>
-
+    <% flash.each do |type, message| %>
+      <%= content_tag :div, message, class: type %>
+    <% end %>
     <%= yield %>
   </body>
 
