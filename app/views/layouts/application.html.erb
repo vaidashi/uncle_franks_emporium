@@ -11,7 +11,10 @@
 
   <body>
     <div class="headerbar"> <a> UNCLE FRANK'S EMPORIUM </a> <a><%= link_to "Cart", cart_path %></a></div>
-
+    <div style="position: absolute; right: 20px; top: 80px;">
+      <%= @cart.item_count %>
+      <%= link_to "Cart", cart_path %>
+    </div>rails <s></s>
     <div class="dropdown userbtn">
       <button onclick="openDropdown()" class="dropbtn">
         <div class="menudiv"></div>
