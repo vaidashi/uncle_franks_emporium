@@ -9,7 +9,7 @@ Item.destroy_all
 Category.destroy_all
 
 
-CATEGORIES = ["Furniture", "Bath", "Kitchen", "Matresses", "Seasonal"]
+CATEGORIES = ["Bath", "Furniture", "Kitchen", "Matresses", "Seasonal"]
 
 CATEGORIES.each do |category|
   created = Category.create(name: category)
