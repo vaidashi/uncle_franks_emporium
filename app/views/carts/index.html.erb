@@ -6,6 +6,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th>Cost</th>
       <th>Quantity</th>
       <th>Add</th>
       <th>Remove</th>
@@ -18,9 +19,16 @@
     <tr>
       <td><%= item.name %></td>
       <td><%= item.description %></td>
+      <td>$<%= item.price %></td>
       <td><%= count %></td>
       <td><%= link_to 'Add item', cart_add_item_path(item), method: :put, class: 'AddBtn' %></td>
       <td><%= link_to 'Remove item', cart_remove_item_path(item), method: :delete, class: 'RemoveBtn' %></td>
     </tr>
     <% end %>
+
   </tbody>
+<p>Your total is: $<%= @total %> </p>
+
+<p></p><%= link_to cart_path, class: "waves-effect waves-light btn-small" do %>
+<i class="material-icons">cart</i>
+<% end %></p>

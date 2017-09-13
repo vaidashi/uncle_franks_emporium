@@ -14,6 +14,10 @@
  *= require_self
  */
 
+.material-icons {
+  color: white;
+}
+
 .userbtn {
   position: fixed;
   top: 15px;
