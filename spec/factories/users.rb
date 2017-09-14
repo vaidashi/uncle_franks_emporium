@@ -4,7 +4,7 @@ FactoryGirl.define do
       "D#{i}"
     end
     name "Dennis"
-    password_digest "MyPassword"
+    password "MyPassword"
 
     factory :user_with_orders do
       after(:create) do |user|
