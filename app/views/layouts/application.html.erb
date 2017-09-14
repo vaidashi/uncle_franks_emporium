@@ -68,7 +68,9 @@
     <% end %>
 
     <div id="main">
-              <%= render :partial => 'layouts/login_popup' %> 
+      <% if !current_user %>
+      <div class='loginbutton'> <%= render :partial => 'layouts/login_popup' %> </div>
+      <% end %>
     <%= yield %>
   </div>
   </body>
