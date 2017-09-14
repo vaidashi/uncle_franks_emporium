@@ -22,6 +22,14 @@ class Cart
     end
   end
 
+  def self.subtotal(item, count)
+    item.price * count
+  end
+
+  def item_count
+    @contents.values.inject(:+)
+  end
+
   def total
     total_price = 0
     all_items.each do |item, count|

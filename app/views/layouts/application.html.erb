@@ -7,41 +7,64 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    <div class="headerbar"> <a> UNCLE FRANK'S EMPORIUM </a><% if current_user %> Logged In as <%= current_user.username %><% end %><%=  %> <a><%= link_to "Cart", cart_path %></a></div>
 
-    <div class="dropdown userbtn">
-      <button onclick="openDropdown()" class="dropbtn">
-        <div class="menudiv"></div>
-        <div class="menudiv"></div>
-        <div class="menudiv"></div>
-      </button>
-      <div id="UserMenu" class="dropdown-content">
-        <% if current_user %>
-          <%= link_to "Logout", logout_path, method: :delete %>
+
+    <% if @cart.item_count %>
+    <div class="cart-count"> <%= @cart.item_count %> </div>
+    <% end %>
+
+    <ul id="dropdown1" class="dropdown-content">
+       <% if current_user %>
+      <li><%= link_to "Logout", logout_path, method: :delete %></li>
         <% else %>
-          <%= link_to "Log In", login_path %>
+      <li><%= link_to "Log In", login_path %></li>
         <% end %>
-        <a href="#">Create Account</a>
-        <a href="#">Link 3</a>
+    </ul>
+<div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper black">
+           <div class="headerbar"> <a> UNCLE FRANK'S EMPORIUM </a><% if current_user %> Logged In as <%= current_user.username %><% end %><%=  %> <a><%= link_to "Cart", cart_path %></a></div>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to cart_path, class: "waves-effect waves-light btn-small" do %>
+          <i class="large material-icons">shopping_cart</i>
+          <% end %></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons white-text">arrow_drop_down</i></a></li>
+        </ul>
+
       </div>
-    </div>
+    </nav>
+</div>
+    <ul style="width:170px; margin-top:64px;" id="slide-out" class="side-nav fixed black white-text">
+            <a> <%= image_tag 'uncle_frank.jpg', size: '150x150', class: 'shake circleimg' %> <a/>
+      <div style="padding-left:10px">
 
-    <div id="mySidenav" class="sidenav">
-      <a> <%= image_tag 'uncle_frank.jpg', size: '150x150', class: 'shake circleimg' %> <a/>
-      <a href="#">About</a>
-      <a href="#">Categories</a>
-      <a href="#">All items</a>
-      <a href="#">Contact</a>
-    </div>
+        <li><h5>Categories</h5></li>
+        <li><div class="divider"></div></li>
+        <div style="padding-left:10px">
+          <li><%= link_to 'Bath', '/Bath', class: "white-text"  %></li>
+          <li><%= link_to 'Furniture', '/Furniture', class: "white-text" %></li>
+          <li><%= link_to 'Kitchen', '/Kitchen', class: "white-text"  %></li>
+          <li><%= link_to 'Mattresses', '/Mattresses', class: "white-text"  %></li>
+          <li><%= link_to 'Seasonal', '/Seasonal', class: "white-text"  %></li>
+        </div>
+        <li><div class="divider"></div></li>
+        <br>
+        <li><h5><%= link_to 'All Items', items_path, class: "white-text"  %></h5></li>
+      </div>
+    </ul>
 
-    <div class="footerbar"> <a> THIS IS A FOOTER </a> </div>
     <% flash.each do |type, message| %>
       <%= content_tag :div, sanitize(message), class: type %>
     <% end %>
+
+    <div id="main">
     <%= yield %>
+  </div>
   </body>
 
 </html>
