@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   def new
-    render :layout=>false
   end
 
   def create
@@ -11,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:bad_message] = "Login Unsuccessful"
-      redirect_to login_path
+      redirect_back(fallback_location: root_path)
     end
   end
 
