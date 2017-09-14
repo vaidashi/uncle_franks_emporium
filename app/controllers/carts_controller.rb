@@ -10,7 +10,7 @@ class CartsController < ApplicationController
     item = Item.find(params[:id])
     @cart.add_item(item.id)
     session[:cart] = @cart.contents
-    flash[:notice] = "Successfully added a #{item.name} to your cart."
+    flash[:good_message] = "Successfully added a #{item.name} to your cart."
     redirect_to cart_path
   end
 
@@ -20,7 +20,7 @@ class CartsController < ApplicationController
     @cart.add_item(item.id)
     session[:cart] = @cart.contents
 
-    flash[:notice] = "Successfully added #{item.name}."
+    flash[:good_message] = "Successfully added #{item.name}."
 
     redirect_to item_path(item)
   end
@@ -30,7 +30,7 @@ class CartsController < ApplicationController
     @cart.remove_item(item.id)
     session[:cart] = @cart.contents
     item_link = "<%= link_to item.name, item_path(item) %>"
-    flash[:remove_item] = %Q[Successfully removed <a href="#{item_path(item)}"> #{item.name} </a> from your cart].html_safe
+    flash[:good_message] = %Q[Successfully removed <a href="#{item_path(item)}"> #{item.name} </a> from your cart].html_safe
     redirect_to cart_path
   end
 end
