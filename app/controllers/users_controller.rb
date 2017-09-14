@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       flash[:good_message] = "Successful Account Creation"
       redirect_to dashboard_path
     else
-      render :new
+      redirect_back(fallback_location: root_path)
     end
   end
 

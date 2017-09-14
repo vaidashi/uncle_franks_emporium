@@ -25,4 +25,18 @@ feature "user can login and out" do
     expect(page).to_not have_link("Logout")
     expect(page).to have_content("Login")
   end
+  scenario "if a user enters invalid credentials" do
+    visit '/'
+
+    click_on("Login")
+
+    expect(current_path).to eq(root_path)
+
+    fill_in "session[username]", with: "invalid_username"
+    fill_in "session[password]", with: "invalid_password"
+
+    click_on("Log In")
+
+    expect(page).to have_content("Login Unsuccessful")
+  end
 end
