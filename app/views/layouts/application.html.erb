@@ -13,6 +13,7 @@
 
   <body>
 
+
     <% if @cart.item_count %>
     <div class="cart-count"> <%= @cart.item_count %> </div>
     <% end %>
@@ -34,7 +35,6 @@
                 <% if current_user %>
             <%= link_to "Logout", logout_path, method: :delete %>
                  <% else %>
-            <%= link_to "Log In", login_path %>
                 <% end %>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -68,6 +68,9 @@
     <% end %>
 
     <div id="main">
+      <% if !current_user %>
+      <div class='loginbutton'> <%= render :partial => 'layouts/login_popup' %> </div>
+      <% end %>
     <%= yield %>
   </div>
   </body>

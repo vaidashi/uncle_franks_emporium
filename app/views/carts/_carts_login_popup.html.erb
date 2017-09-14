@@ -1,0 +1,20 @@
+<!-- Button to open the modal login form -->
+<button onclick="document.getElementById('id01').style.display='block'">To checkout login or create an account</button>
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+    <div class="container">
+      <%= form_for(:session, url: login_path) do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= f.submit "Log In"%>
+      <% end %>
+      <%= link_to "Create Account", new_user_path %>
+    </div>
+</div>

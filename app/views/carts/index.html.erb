@@ -31,7 +31,13 @@
     <% end %>
 
   </tbody>
-<p>Your total is: <%= number_to_currency(@total) %> </p>
+<p id='totaltext'>Your total is: <%= number_to_currency(@total) %> </p>
+
+<% if current_user %>
+  <%= button_to 'checkout', '#' %>
+<% else %>
+  <%= render :partial => 'carts/carts_login_popup' %>
+<% end %>
 
 <p></p><%= link_to cart_path, class: "waves-effect waves-light btn-small" do %>
 <i class="material-icons">cart</i>
