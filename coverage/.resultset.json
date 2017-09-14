@@ -255,7 +255,7 @@
         null,
         null,
         1,
-        62,
+        101,
         null,
         null,
         1,
@@ -294,7 +294,7 @@
         null,
         null,
         1,
-        41,
+        42,
         null,
         null,
         1,
@@ -370,19 +370,24 @@
       "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/sessions_controller.rb": [
         1,
         1,
-        2,
-        null,
-        null,
-        1,
-        3,
-        3,
-        1,
-        1,
         1,
         null,
+        null,
+        1,
         2,
         2,
+        1,
+        1,
+        1,
         null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         null,
         null,
         null
@@ -421,6 +426,6 @@
         null
       ]
     },
-    "timestamp": 1505417286
+    "timestamp": 1505419974
   }
 }
