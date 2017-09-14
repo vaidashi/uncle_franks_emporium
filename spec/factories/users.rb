@@ -1,7 +1,15 @@
 FactoryGirl.define do
   factory :user do
-    username "MyString"
-    name "MyString"
-    password_digest "MyString"
+    sequence(:username) do |i|
+      "D#{i}"
+    end
+    name "Dennis"
+    password_digest "MyPassword"
+
+    factory :user_with_orders do
+      after(:create) do |user|
+        create_list(:order, 3, :user => user)
+      end
+    end
   end
 end
