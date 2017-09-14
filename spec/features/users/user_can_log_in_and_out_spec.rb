@@ -20,6 +20,9 @@ feature "user can login and out" do
     expect(page).to_not have_link("Log In")
     expect(page).to have_link("Logout")
 
-
+    click_on "Logout"
+    expect(current_path).to eq(root_path)
+    expect(page).to_not have_link("Logout")
+    expect(page).to have_link("Log In")
   end
 end
