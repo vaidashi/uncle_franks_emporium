@@ -6,7 +6,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Cost</th>
+      <th>Subtotal</th>
       <th>Quantity</th>
       <th>Add</th>
       <th>Remove</th>
@@ -21,8 +21,12 @@
       <td><%= item.description %></td>
       <td>$<%= item.price %></td>
       <td><%= count %></td>
-      <td><%= link_to 'Add item', cart_add_item_path(item), method: :put, class: 'AddBtn' %></td>
-      <td><%= link_to 'Remove item', cart_remove_item_path(item), method: :delete, class: 'RemoveBtn' %></td>
+      <td><%= link_to cart_add_item_path(item), method: :put, class: "waves-effect waves-light btn-small black-text" do %>
+      <i class="small material-icons">add_shopping_cart</i>
+      <% end %></td>
+      <td><%= link_to cart_add_item_path(item), method: :delete, class: "waves-effect waves-light btn-small black-text" do %>
+      <i class="material-icons">delete</i>
+      <% end %></td>
     </tr>
     <% end %>
 

@@ -21,7 +21,7 @@
       <li>User information here</li>
       <li>Login</li>
     </ul>
-
+<div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper black">
         <a href="#!" class="brand-logo center small">Uncle Frank's Trash Emporium</a>
@@ -33,22 +33,24 @@
         </ul>
       </div>
     </nav>
+</div>
+    <ul style="width:170px; margin-top:64px;" id="slide-out" class="side-nav fixed black white-text">
+            <a> <%= image_tag 'uncle_frank.jpg', size: '150x150', class: 'shake circleimg' %> <a/>
+      <div style="padding-left:10px">
 
-    <ul style="width:150px; margin-top:64px;" id="slide-out" class="side-nav fixed black white-text">
         <li><h5>Categories</h5></li>
         <li><div class="divider"></div></li>
-        <div style="padding-left:20px">
-
-        <li>Bath</li>
-        <li>Furniture</li>
-        <li>Kitchen</li>
-        <li>Mattresses</li>
-        <li>Seasonal</li>
-      </div>
+        <div style="padding-left:10px">
+          <li><%= link_to 'Bath', '/Bath', class: "white-text"  %></li>
+          <li><%= link_to 'Furniture', '/Furniture', class: "white-text" %></li>
+          <li><%= link_to 'Kitchen', '/Kitchen', class: "white-text"  %></li>
+          <li><%= link_to 'Mattresses', '/Mattresses', class: "white-text"  %></li>
+          <li><%= link_to 'Seasonal', '/Seasonal', class: "white-text"  %></li>
+        </div>
         <li><div class="divider"></div></li>
         <br>
-        <div class="white-text">
-        <li><h5><%= link_to 'All Items', items_path %></h5></li>
+        <li><h5><%= link_to 'All Items', items_path, class: "white-text"  %></h5></li>
+      </div>
     </ul>
 
     <% flash.each do |type, message| %>
