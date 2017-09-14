@@ -8,7 +8,7 @@ feature "When a visitor adds an item to their cart and visits their cart" do
 
     click_on "Add to Cart"
 
-    click_on "Cart"
+    click_on "shopping_cart"
 
     click_on "delete"
 
@@ -23,7 +23,7 @@ feature "When a visitor adds an item to their cart and visits their cart" do
 
     expect(current_path).to eq(item_path(item))
 
-    click_on "Cart"
+    click_on "shopping_cart"
 
     expect(page).to_not have_content(item.description)
     expect(page).to_not have_content(item.price)

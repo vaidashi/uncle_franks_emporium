@@ -11,7 +11,7 @@ feature "When a visitor adds an item to their cart and visits their cart" do
     click_on "Add to Cart"
     click_on "Add to Cart"
 
-    click_on "Cart"
+    click_on "shopping_cart"
 
     expect(page).to have_content("2")
     expect(page).to have_content(100.0)
