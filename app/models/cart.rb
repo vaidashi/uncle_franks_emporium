@@ -22,6 +22,10 @@ class Cart
     end
   end
 
+  def self.subtotal(item, count)
+    item.price * count
+  end
+
   def item_count
     @contents.values.inject(:+)
   end

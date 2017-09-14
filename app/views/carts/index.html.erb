@@ -19,7 +19,7 @@
     <tr>
       <td><%= item.name %></td>
       <td><%= item.description %></td>
-      <td>$<%= item.price %></td>
+      <td><%= number_to_currency(Cart.subtotal(item, count)) %></td>
       <td><%= count %></td>
       <td><%= link_to cart_add_item_path(item), method: :put, class: "waves-effect waves-light btn-small black-text" do %>
       <i class="small material-icons">add_shopping_cart</i>
@@ -31,7 +31,7 @@
     <% end %>
 
   </tbody>
-<p>Your total is: $<%= @total %> </p>
+<p>Your total is: <%= number_to_currency(@total) %> </p>
 
 <p></p><%= link_to cart_path, class: "waves-effect waves-light btn-small" do %>
 <i class="material-icons">cart</i>
