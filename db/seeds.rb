@@ -16,6 +16,8 @@ CATEGORIES.each do |category|
   puts "Created #{created.name} category."
 end
 
+
+
 # Furniture
 puts "Creating Furniture Items"
 Item.create(name: "Reduced Height Couch", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Furniture"), image_path: "furniture1.png")
@@ -59,12 +61,14 @@ Item.create(name: "Toothbrush Assortment", description: Faker::Hipster.paragraph
 Item.create(name: "Luxury Bath Mat", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath3.jpg")
 Item.create(name: "Shower Curtain with edge accents", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath4.jpg")
 
+# puts "Creating the admin"
+# User.create(name: "admin", username: "admin", password: "admin", role: "admin")
 
 
-# 10.times do |users|
-#   name = Faker::FamilyGuy.character
-#   email = "#{name.gsub(/\s+/, "")}@fox.com"
-#   password = name.split.first.downcase
-#   User.create(name: name, email: email, password: password)
-#   puts "Created #{name}'s account'"
-# end
+10.times do |users|
+  name = Faker::FamilyGuy.character
+  username = "#{name.gsub(/\s+/, "")}"
+  password = name.split.first.downcase
+  User.create(name: name, username: username, password: password)
+  puts "Created #{name}'s account'"
+end
