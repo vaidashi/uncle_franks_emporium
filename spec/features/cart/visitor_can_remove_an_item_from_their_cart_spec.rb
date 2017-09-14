@@ -10,12 +10,12 @@ feature "When a visitor adds an item to their cart and visits their cart" do
 
     click_on "Cart"
 
-    click_on "Remove"
+    click_on "delete"
 
     expect(page).to have_content("Successfully removed #{item.name}")
     expect(current_path).to eq(cart_path)
     expect(page).to_not have_content(item.description)
-    expect(page).to_not have_content(item.price)
+    expect(page).to_not have_content("$50.00")
     expect(page).to_not have_content(item.image_path)
     expect(page).to have_link(item.name)
 
