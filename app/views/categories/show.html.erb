@@ -1,10 +1,22 @@
 <h1>Category Show Page</h1>
 
-
-<ul>
+<div class="row">
   <% @category.items.each do |item| %>
-    <p>  <%= item.name %> </p>
-    <p>  <%= number_to_currency(item.price) %> </p>
-    <%= image_tag item.image_path, class: "itemimage", size: "400x300" %>
-  <% end  %>
-</ul>
+  <div class="col s12 m6 l3">
+    <div class="card medium">
+      <div class="card-image">
+        <img src="/assets/<%=item.image_path%>">
+        <span class="card-title"><%=item.name%></span>
+      </div>
+      <div class="card-content">
+        <p><%= item.description %></p>
+      </div>
+      <div class="card-action">
+
+        <%= button_to "Add to Cart", carts_path(item_id: item.id), class: "btn btn-danger" %>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

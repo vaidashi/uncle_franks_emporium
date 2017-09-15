@@ -253,9 +253,9 @@
 }
 
 .loginbutton {
-    position: absolute;
+    position: fixed;
     top: 76px;
-    right: 32px;
+    left: 162px;
  }
 
  #totaltext {
