@@ -37,6 +37,7 @@
 
 
 
+
 .userbtn {
   position: fixed;
   top: 15px;
@@ -299,4 +300,17 @@
   padding: 9px 0;
   text-shadow: rgba(99,130,0,.30) 1px 1px 1px;
   font-size: 21px;
+}
+
+.card-action {
+  display: flex;
+}
+
+.space {
+  padding-right: 5%;
+}
+
+.indextitle {
+  font-size: 16px;
+  font-weight: bold;
 }

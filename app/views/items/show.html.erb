@@ -7,5 +7,9 @@
     <p>  <%= number_to_currency(@item.price) %> </p>
     <p>  <%= @item.category.name %> </p>
     <%= image_tag @item.image_path, class: "itemimage", size: "640x480" %>
+    <% if @item.active %>
     <%= button_to "Add to Cart", carts_path(item_id: @item.id), class: "btn btn-danger" %>
+    <% else %>
+    <%= button_to "Item Retired", "#", class: "btn btn-danger disabled" %>
+    <% end %>
 </ul>

@@ -9,7 +9,7 @@ Item.destroy_all
 Category.destroy_all
 Order.destroy_all
 
-CATEGORIES = ["Bath", "Furniture", "Kitchen", "Matresses", "Seasonal"]
+CATEGORIES = ["Bath", "Furniture", "Kitchen", "Mattresses", "Seasonal"]
 
 CATEGORIES.each do |category|
   created = Category.create(name: category)
@@ -59,7 +59,7 @@ puts "Creating Bath Items"
 Item.create(name: "Polka Dot Shower Curtain", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath1.jpg")
 Item.create(name: "Toothbrush Assortment", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath2.jpg")
 Item.create(name: "Luxury Bath Mat", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath3.jpg")
-Item.create(name: "Shower Curtain with edge accents", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath4.jpg")
+Item.create(name: "Shower Curtain with edge accents", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Mattresses"), image_path: "bath4.jpg")
 
 # -----------------------------Users
 10.times do |users|
