@@ -22,7 +22,7 @@ class CartsController < ApplicationController
 
     flash[:good_message] = "Successfully added #{item.name}."
 
-    redirect_to item_path(item)
+    redirect_back(fallback_location: root_path)
   end
 
   def destroy
