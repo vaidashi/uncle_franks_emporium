@@ -1,0 +1,16 @@
+
+<h3>Order show page</h3>
+
+
+<p>
+
+<% @order.items.each do |item| %>
+<%= link_to item.name, item_path(item) %><br>
+<%= number_to_currency(item.price) %>
+<% end %>
+</p>
+
+
+Order Status <%= @order.status.humanize %><br>
+Order Placed <%= (@order.created_at) %>
+Order Total  <%#= @order.total_price %>
