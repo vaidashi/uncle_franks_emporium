@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Item.destroy_all
 Category.destroy_all
-
+Order.destroy_all
 
 CATEGORIES = ["Bath", "Furniture", "Kitchen", "Matresses", "Seasonal"]
 
@@ -18,7 +18,7 @@ end
 
 
 
-# Furniture
+# -----------------------------Furniture
 puts "Creating Furniture Items"
 Item.create(name: "Reduced Height Couch", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Furniture"), image_path: "furniture1.png")
 Item.create(name: "Pallet Chic Backyard Set", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Furniture"), image_path: "furniture2.png")
@@ -33,7 +33,7 @@ Item.create(name: "Wasteland Chic Chaise", description: Faker::Hipster.paragraph
 Item.create(name: "Shabby Chic Deconstructed Couch", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Furniture"), image_path: "furniture11.png")
 Item.create(name: "Distressed Dual Tone Leather Sofa", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Furniture"), image_path: "furniture12.png")
 
-# Kitchen
+# -----------------------------Kitchen
 puts "Creating Kitchen Items"
 Item.create(name: "Wasteland Chic Fridge", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Kitchen"), image_path: "kitchen1.jpg")
 Item.create(name: "Pre-weathered Deluxe Microwave", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Kitchen"), image_path: "kitchen2.jpg")
@@ -43,7 +43,7 @@ Item.create(name: "Shabby Chic Microwave", description: Faker::Hipster.paragraph
 Item.create(name: "Deluxe 'Probably an Oven'", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Kitchen"), image_path: "kitchen6.jpg")
 Item.create(name: "Rust Based Pan", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Kitchen"), image_path: "kitchen7.jpg")
 
-# Seasonal
+# -----------------------------Seasonal
 puts "Creating Seasonal Items"
 Item.create(name: "Possibly a Christmas Tree", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal1.jpg")
 Item.create(name: "Artesinal Jack 'O Lantern", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal2.jpg")
@@ -52,19 +52,16 @@ Item.create(name: "Aged Handcrafted Carved Pumpkin", description: Faker::Hipster
 Item.create(name: "Ornaments Assortment", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal5.jpg")
 Item.create(name: "Pre-Lit Fireworks", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal6.jpg")
 Item.create(name: "Pre-Lit Christmas Tree", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal7.jpg")
-Item.create(name: "Holiday Cheer Spreader", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal7.jpg")
+Item.create(name: "Holiday Cheer Spreader", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Seasonal"), image_path: "seasonal8.jpg")
 
-# Bath
+# -----------------------------Bath
 puts "Creating Bath Items"
 Item.create(name: "Polka Dot Shower Curtain", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath1.jpg")
 Item.create(name: "Toothbrush Assortment", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath2.jpg")
 Item.create(name: "Luxury Bath Mat", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath3.jpg")
 Item.create(name: "Shower Curtain with edge accents", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath4.jpg")
 
-# puts "Creating the admin"
-# User.create(name: "admin", username: "admin", password: "admin", role: "admin")
-
-
+# -----------------------------Users
 10.times do |users|
   name = Faker::FamilyGuy.character
   username = "#{name.gsub(/\s+/, "")}"
@@ -72,3 +69,29 @@ Item.create(name: "Shower Curtain with edge accents", description: Faker::Hipste
   User.create(name: name, username: username, password: password)
   puts "Created #{name}'s account'"
 end
+
+# -----------------------------Orders
+def weighed_number(weights)
+  raise 'Probabilities must sum up to 1' unless weights.values.inject(&:+) == 1.0
+
+  u = 0.0
+  ranges = Hash[weights.map{ |v, p| [u += p, v] }]
+
+  u = rand
+  ranges.find{ |p, _| p > u }.last
+end
+
+200.times do |order|
+  t1 = Time.parse("2012-11-16 12:00:00")
+  t2 = Time.parse("2018-11-20 12:00:00")
+  created = Order.create(user_id: User.all.sample.id, status: weighed_number({0 => 0.2, 1 => 0.1, 2 => 0.1, 3 => 0.6 }), created_at: rand(t1..t2), updated_at: Time.now)
+  # random = weighed_number({1 => 0.2, 2 => 0.2, 3 => 0.2, 4 => 0.2, 5 => 0.2 })
+  # random.times do |add_item|
+  #   created << Item.all.sample
+  # end
+  puts "Created order #{created.id} for #{created.user.name}"
+end
+
+puts "Creating the admin"
+# admin role still needs to be added
+User.create(name: "admin", username: "admin", password: "admin")
