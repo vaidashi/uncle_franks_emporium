@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-09-15T17:23:46-06:00">2017-09-15T17:23:46-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-09-15T17:52:53-06:00">2017-09-15T17:52:53-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -644,7 +644,7 @@
         <li class="covered" data-hits="7" data-linenumber="25">
           <span class="hits">7</span>
           
-          <code class="ruby">    redirect_to item_path(item)</code>
+          <code class="ruby">    redirect_back(fallback_location: root_path)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
@@ -829,8 +829,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
           <code class="ruby">    @items = Item.all</code>
         </li>
@@ -889,8 +889,8 @@
           <code class="ruby">    def set_item</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="15">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="12" data-linenumber="15">
+          <span class="hits">12</span>
           
           <code class="ruby">      @item = Item.find(params[:id])</code>
         </li>
