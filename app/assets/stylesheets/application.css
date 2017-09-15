@@ -300,3 +300,11 @@
   text-shadow: rgba(99,130,0,.30) 1px 1px 1px;
   font-size: 21px;
 }
+
+.card-action {
+  display: flex;
+}
+
+.space {
+  padding-right: 5%;
+}
