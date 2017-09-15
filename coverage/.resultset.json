@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/environment.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/application.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/application.rb": [
         1,
         null,
         1,
@@ -41,12 +41,12 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/boot.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/environments/test.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/environments/test.rb": [
         1,
         null,
         null,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/application_controller_renderer.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -100,7 +100,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/assets.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/backtrace_silencers.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -125,20 +125,20 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/cookies_serializer.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/inflections.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -156,13 +156,13 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/mime_types.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/initializers/wrap_parameters.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -178,7 +178,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/config/routes.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/config/routes.rb": [
         1,
         null,
         1,
@@ -206,45 +206,35 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/helpers/application_helper.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/item_order.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/item_order.rb": [
         1,
-        1,
-        1,
-        null
-      ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/order.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/application_record.rb": [
         1,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/item.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/item.rb": [
         1,
         1,
         1,
         1,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/category.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/category.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/items_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/items_controller.rb": [
         1,
         1,
         null,
@@ -264,7 +254,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/application_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -275,7 +265,7 @@
         null,
         null,
         1,
-        142,
+        155,
         null,
         null,
         1,
@@ -284,7 +274,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/cart.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/cart.rb": [
         1,
         1,
         null,
@@ -314,7 +304,7 @@
         null,
         null,
         1,
-        52,
+        91,
         null,
         null,
         1,
@@ -327,7 +317,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/carts_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/carts_controller.rb": [
         1,
         1,
         null,
@@ -365,7 +355,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/categories_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/categories_controller.rb": [
         null,
         null,
         1,
@@ -376,19 +366,29 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/models/user.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/user.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/welcome_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/order.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/sessions_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -412,7 +412,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/users_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -445,7 +445,7 @@
         null,
         null
       ],
-      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/orders_controller.rb": [
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/orders_controller.rb": [
         null,
         1,
         null,
@@ -460,6 +460,6 @@
         null
       ]
     },
-    "timestamp": 1505428676
+    "timestamp": 1505509759
   }
 }

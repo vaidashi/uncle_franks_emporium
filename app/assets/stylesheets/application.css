@@ -14,11 +14,15 @@
  *= require_self
  */
 
+.dropdown-content{
+  margin-top: 65px;
+}
+
 .cart-count {
-    position: absolute;
+    position: fixed;
     top: 12px;
-    right: 62px;
-    z-index: 5;
+    right: 8px;
+    z-index: 99999;
     color: red;
     text-shadow: 1px 1px 1px #000;
     width: 16px;
@@ -30,6 +34,8 @@
     text-align: center;
     background: blue;
  }
+
+
 
 .userbtn {
   position: fixed;
@@ -253,9 +259,10 @@
 }
 
 .loginbutton {
-    position: absolute;
-    top: 76px;
-    right: 32px;
+    position: fixed;
+    top: 20px;
+    right: 62px;
+    z-index: 999;
  }
 
  #totaltext {
@@ -270,9 +277,8 @@
   position: absolute;
   border: 1px solid black;
   outline-color: black;
-  top: 10%;
-  left: 30%;
-  background-color: rgb(161,195,0);
+  top: 5px;
+  left: 15%;
   background-color: rgba(161,195,0,.3);
   color: green;
   padding: 9px 0;
@@ -286,9 +292,8 @@
   position: absolute;
   border: 1px solid black;
   outline-color: black;
-  top: 10%;
-  left: 30%;
-  background-color: rgb(161,195,0);
+  top: 5px;
+  left: 15%;
   background-color: rgba(161,195,0,.3);
   color: red;
   padding: 9px 0;

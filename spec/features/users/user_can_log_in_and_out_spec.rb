@@ -16,7 +16,9 @@ feature "user can login and out" do
     click_on("Log In")
 
     expect(current_path).to eq('/dashboard')
-    expect(page).to have_content("Logged In as #{user.username}")
+    click_on("arrow_drop_down")
+
+    expect(page).to have_content("Logged in as: #{user.username}")
     expect(page).to_not have_link("Login")
     expect(page).to have_link("Logout")
 
