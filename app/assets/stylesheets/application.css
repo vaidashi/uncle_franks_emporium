@@ -260,8 +260,9 @@
 
 .loginbutton {
     position: fixed;
-    top: 76px;
-    left: 162px;
+    top: 20px;
+    right: 62px;
+    z-index: 999;
  }
 
  #totaltext {
@@ -276,9 +277,8 @@
   position: absolute;
   border: 1px solid black;
   outline-color: black;
-  top: 10%;
-  left: 30%;
-  background-color: rgb(161,195,0);
+  top: 5px;
+  left: 15%;
   background-color: rgba(161,195,0,.3);
   color: green;
   padding: 9px 0;
@@ -292,9 +292,8 @@
   position: absolute;
   border: 1px solid black;
   outline-color: black;
-  top: 10%;
-  left: 30%;
-  background-color: rgb(161,195,0);
+  top: 5px;
+  left: 15%;
   background-color: rgba(161,195,0,.3);
   color: red;
   padding: 9px 0;
