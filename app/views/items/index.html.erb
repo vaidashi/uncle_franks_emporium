@@ -6,13 +6,18 @@
     <div class="card medium">
       <div class="card-image">
         <img src="/assets/<%=item.image_path%>">
-        <span class="card-title"><%=item.name%></span>
+        <span class="card-title"></span>
       </div>
       <div class="card-content">
+        <p class="indextitle"> <%=item.name%>: <%= number_to_currency(item.price) %> </p>
         <p><%= item.description %></p>
       </div>
       <div class="card-action">
-        <%= button_to "Add to Cart", carts_path(item_id: item.id), class: "btn btn-danger small" %>
+        <% if item.active %>
+        <%= button_to "Add to Cart", carts_path(item_id: item.id), class: "btn btn-danger" %>
+        <% else %>
+        <%= button_to "Item Retired", "#", class: "btn btn-danger disabled" %>
+        <% end %>
         <div class="space"></div>
         <%= button_to "View Item", item_path(item.id), class: "btn btn-danger small", method: 'get' %>
       </div>
