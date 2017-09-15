@@ -19,7 +19,7 @@ feature "visitor can create account" do
     click_on "Create Account"
 
     expect(current_path).to eq(dashboard_path)
-    expect(page).to have_content("Logged In as Charlie")
+    expect(page).to have_content("Logged in as: Charlie")
     expect(page).to_not have_link("Log In")
     expect(page).to have_link("Logout")
   end
