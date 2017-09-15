@@ -84,7 +84,7 @@
 
  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
  #main {
-    padding-left: 200px;
+    padding-left: 230px;
  }
 
  .headerbar {
@@ -124,6 +124,10 @@
      padding: 14px 16px;
      text-decoration: none;
  }
+
+.left-padding {
+  padding-left: 20px;
+}
 
  .circleimg {
     border-radius: 50%;
