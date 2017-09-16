@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/environment.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/application.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/application.rb": [
         1,
         null,
         1,
@@ -41,12 +41,12 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/boot.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/environments/test.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/environments/test.rb": [
         1,
         null,
         null,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/application_controller_renderer.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/application_controller_renderer.rb": [
         null,
         null,
         null,
@@ -100,7 +100,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/assets.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -116,7 +116,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/backtrace_silencers.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -125,20 +125,20 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/cookies_serializer.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/cookies_serializer.rb": [
         null,
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/inflections.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -156,13 +156,13 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/mime_types.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/initializers/wrap_parameters.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -178,7 +178,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/config/routes.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/config/routes.rb": [
         1,
         null,
         1,
@@ -212,20 +212,20 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/helpers/admin_helper.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/helpers/admin_helper.rb": [
         1,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/helpers/application_helper.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/cart.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/cart.rb": [
         1,
         1,
         null,
         1,
-        94,
+        95,
         null,
         null,
         1,
@@ -250,7 +250,7 @@
         null,
         null,
         1,
-        140,
+        142,
         null,
         null,
         1,
@@ -263,55 +263,25 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/category.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/category.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/application_record.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/application_record.rb": [
         1,
         1,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/item_order.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/item_order.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/item.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/order.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/user.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/item.rb": [
         1,
         1,
         1,
@@ -321,7 +291,41 @@
         1,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/application_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/order.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        5,
+        5,
+        5,
+        5,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -332,11 +336,11 @@
         null,
         null,
         1,
-        88,
+        89,
         null,
         null,
         1,
-        88,
+        89,
         null,
         null,
         1,
@@ -348,45 +352,42 @@
         null,
         null,
         1,
-        8,
+        9,
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/admin/dashboard_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/admin/dashboard_controller.rb": [
         1,
         1,
+        4,
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/admin/base_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/admin/base_controller.rb": [
         1,
         1,
         null,
         1,
-        8,
+        9,
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/admin/users_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/admin/users_controller.rb": [
         1,
         null,
         1,
-        null,
         2,
         1,
         null,
         null,
         null,
-        null,
         1,
-        null,
         1,
         1,
         1,
         null,
         0,
         0,
-        null,
         null,
         null,
         null,
@@ -398,13 +399,13 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/welcome_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/sessions_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -437,7 +438,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/items_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/items_controller.rb": [
         1,
         1,
         null,
@@ -457,7 +458,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/carts_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/carts_controller.rb": [
         1,
         1,
         null,
@@ -495,7 +496,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/categories_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/categories_controller.rb": [
         null,
         null,
         1,
@@ -506,7 +507,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/users_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/users_controller.rb": [
         1,
         1,
         null,
@@ -540,7 +541,7 @@
         null,
         null
       ],
-      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/controllers/orders_controller.rb": [
+      "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/controllers/orders_controller.rb": [
         null,
         1,
         1,
@@ -573,6 +574,6 @@
         null
       ]
     },
-    "timestamp": 1505600187
+    "timestamp": 1505603281
   }
 }
