@@ -21,4 +21,13 @@ feature "as a logged in non-admin user" do
     expect(page).to have_content("The page you were looking for doesn't exist")
    end
   end
+  feature "as an unregistered user" do
+    scenario "they cannot visit the admin dashboard" do
+      user = create(:user)
+
+      visit "/admin/dashboard"
+
+      expect(page).to have_content("The page you were looking for doesn't exist")
+   end
+  end
 end
