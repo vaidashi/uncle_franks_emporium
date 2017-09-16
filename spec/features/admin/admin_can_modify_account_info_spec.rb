@@ -23,6 +23,15 @@ feature "as a logged in admin" do
   end
 
   scenario "I cant modify other user data" do
+    admin   = create(:user, role: 1)
+    user  = create(:user)
 
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+
+    visit "/admin/users/#{user.id}/edit"
+
+    expect(page).to have_content("The page you were looking for doesn't exist")
   end
+
+
 end
