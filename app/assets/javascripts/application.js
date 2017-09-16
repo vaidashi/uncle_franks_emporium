@@ -13,7 +13,6 @@
 //= require rails-ujs
 //= require_tree .
 
-
 var slideIndex = 1;
 showDivs(slideIndex);
 
