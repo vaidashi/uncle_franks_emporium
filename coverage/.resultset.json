@@ -240,13 +240,16 @@
         1,
         1,
         1,
-        null,
-        1,
         1,
         null,
         null,
+        null,
         1,
+        2,
+        null,
+        null,
         1,
+        2,
         null,
         null,
         1,
@@ -256,6 +259,9 @@
         1,
         0,
         null,
+        null,
+        1,
+        2,
         null,
         null
       ],
@@ -265,12 +271,21 @@
         null,
         null
       ],
+      "/Users/bove/GitHub/projects/uncle_franks_emporium/app/controllers/admin/base_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
       "/Users/bove/GitHub/projects/uncle_franks_emporium/app/models/cart.rb": [
         1,
         1,
         null,
         1,
-        1,
+        2,
         null,
         null,
         1,
@@ -309,6 +324,6 @@
         null
       ]
     },
-    "timestamp": 1505596170
+    "timestamp": 1505596671
   }
 }
