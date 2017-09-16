@@ -1,12 +1,21 @@
 require 'rails_helper'
 
 feature "as a logged in admin" do
-  scenario "they can visit the dashboard" do
+  scenario "they are redirected to the admin dashboard after they log in" do
     admin   = create(:user, role: 1)
 
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+    visit '/'
 
-    visit "/admin/dashboard"
+    click_on("Login")
+
+    expect(current_path).to eq(root_path)
+
+    fill_in "session[username]", with: admin.username
+    fill_in "session[password]", with: admin.password
+
+    click_on("Log In")
+
+    expect(current_path).to eq('/admin/dashboard')
 
     expect(page).to have_content("Admin Dashboard")
   end
