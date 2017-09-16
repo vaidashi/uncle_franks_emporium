@@ -42,7 +42,7 @@
 
 
 <% if current_user %>
-  <%= button_to 'checkout', '#' %>
+  <%= button_to 'Checkout', orders_path %>
 <% else %>
   <%= render :partial => 'carts/carts_login_popup' %>
 <% end %>
