@@ -233,6 +233,9 @@
         1,
         1,
         1,
+        null,
+        1,
+        1,
         null
       ],
       "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/order.rb": [
@@ -254,8 +257,16 @@
         null,
         null,
         null
+      ],
+      "/Users/dannytrujillo/turing/2module/projects/uncle_franks_emporium/app/models/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1505586049
+    "timestamp": 1505587472
   }
 }
