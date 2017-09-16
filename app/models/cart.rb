@@ -33,7 +33,7 @@ class Cart
   def total
     total_price = 0
     all_items.each do |item, count|
-      total_price += (item.price * count)
+      total_price += (item.price * count) 
     end
     total_price
   end

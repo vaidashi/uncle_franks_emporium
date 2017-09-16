@@ -4,6 +4,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Description</th>
       <th>Subtotal</th>
@@ -18,6 +19,7 @@
   <tbody class="table">
     <% @items.each do |item, count| %>
     <tr>
+      <td><%= image_tag item.image_path, size: "50x50" %> </td>
       <td><%= item.name %></td>
       <td><%= item.description %></td>
       <td><%= number_to_currency(Cart.subtotal(item, count)) %></td>
@@ -31,21 +33,21 @@
     <% end %>
     </tr>
     <tr>
+      <td>
+        <% if current_user %>
+          <%= button_to 'Checkout', orders_path %>
+        <% else %>
+          <%= render :partial => 'carts/carts_login_popup' %>
+        <% end %>
+      </td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td class='totaltext'> Your total is: <%= number_to_currency(@total) %>  </td>
+      <td class='totaltext'>Your </td>
+      <td class='totaltext'>total </td>
+      <td class='totaltext'>is: </td>
+      <td class='totaltext'> <%= number_to_currency(@total) %>  </td>
     </tr>
   </tbody>
-
-
-<% if current_user %>
-  <%= button_to 'Checkout', orders_path %>
-<% else %>
-  <%= render :partial => 'carts/carts_login_popup' %>
-<% end %>
 
 <p></p><%= link_to cart_path, class: "waves-effect waves-light btn-small" do %>
 <i class="material-icons">cart</i>
