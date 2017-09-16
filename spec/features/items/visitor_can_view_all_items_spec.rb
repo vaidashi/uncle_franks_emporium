@@ -9,9 +9,6 @@ feature "visitor can view all items" do
     expect(page).to have_content(item1.name)
     expect(page).to have_content(item2.name)
 
-    # expect(page).to have_content("$50.00")
-    # expect(page).to have_content("$50.00")
-
     expect(page).to have_content(item1.description)
     expect(page).to have_content(item2.description)
   end

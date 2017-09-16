@@ -19,7 +19,7 @@
   <tbody class="table">
     <% @items.each do |item, count| %>
     <tr>
-      <td><%= image_tag item.image_path, size: "50x50" %> </td>
+      <td class="center-align"><%= image_tag item.image_path, size: "50x50" %> </td>
       <td><%= item.name %></td>
       <td><%= item.description %></td>
       <td><%= count %></td>
