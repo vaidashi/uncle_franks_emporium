@@ -8,13 +8,14 @@ class="close" title="Close Modal">&times;</span>
 
   <!-- Modal Content -->
     <div class="container">
-      <%= form_for(:session, url: login_path) do |f| %>
+      <%= form_for(:session, url: login_path, id: 'cart_login_form') do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %>
         <%= f.label :password %>
         <%= f.password_field :password %>
         <%= f.submit "Log In"%>
       <% end %>
-      <%= link_to "Create Account", new_user_path %>
+      <br />
+      <%= render :partial => 'carts/cart_create_account_popup' %>
     </div>
 </div>

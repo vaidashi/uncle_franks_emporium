@@ -6,17 +6,15 @@ feature "visitor can create account" do
 
     click_on "Login"
 
-    expect(page).to have_link("Create Account")
+    click_on(id: 'create_link')
 
-    click_on "Create Account"
+    within('.new_user') do
+      fill_in "user[username]", with: "Charlie"
+      fill_in "user[password]", with: "I love the waitress"
+      fill_in "user[password_confirmation]", with: "I love the waitress"
+    end
 
-    expect(current_path).to eq(new_user_path)
-
-    fill_in "user[username]", with: "Charlie"
-    fill_in "user[password]", with: "I love the waitress"
-    fill_in "user[password_confirmation]", with: "I love the waitress"
-
-    click_on "Create Account"
+    click_on(id: "create_form")
 
     expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Logged in as: Charlie")
@@ -28,18 +26,14 @@ feature "visitor can create account" do
 
     click_on "Login"
 
-    expect(page).to have_link("Create Account")
-
-    click_on "Create Account"
-
-    expect(current_path).to eq(new_user_path)
+    click_on(id: 'create_link')
 
     fill_in "user[username]", with: ""
     fill_in "user[password]", with: ""
     fill_in "user[password_confirmation]", with: "dd"
 
-    click_on "Create Account"
+    click_on(id: "create_form")
 
-    expect(current_path).to eq(new_user_path)
+    expect(current_path).to_not eq(dashboard_path)
   end
 end
