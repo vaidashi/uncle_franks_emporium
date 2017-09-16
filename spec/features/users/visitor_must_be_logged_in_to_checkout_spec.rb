@@ -1,4 +1,5 @@
 require 'rails_helper'
+Capybara.javascript_driver = :webkit
 
 feature "visitor can create account" do
   scenario "visitor can create an account and check out" do
@@ -14,13 +15,13 @@ feature "visitor can create account" do
 
     click_on "To checkout login or create an account"
 
-    click_on("Create Account", :match => :first)
-
+    click_on(id: 'create_link', :match => :first)
+    
     fill_in "user[username]", with: "Charlie"
     fill_in "user[password]", with: "I love the waitress"
     fill_in "user[password_confirmation]", with: "I love the waitress"
 
-    click_on "Create Account"
+    click_on(id: "create_form")
 
     click_on "shopping_cart"
 
