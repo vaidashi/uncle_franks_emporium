@@ -12,6 +12,11 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create]
 
+  namespace :admin do
+    resources :dashboard, only: [:index]
+    # get '/dashboard', to: "admindashboard#dashboard"
+  end
+
   get "/dashboard", to: "users#show"
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
