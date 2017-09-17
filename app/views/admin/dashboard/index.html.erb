@@ -1,9 +1,14 @@
 <h3>Admin Dashboard</h3>
 
-<p>Ordered: <%= @orders.ordered.count %> </p>
-<p>Paid: <%= @orders.paid.count %> </p>
-<p>Cancelled: <%= @orders.cancelled.count %> </p>
-<p>Completed: <%= @orders.completed.count %> </p>
+<p>Ordered: <%= @all_orders.ordered.count %> </p>
+<p>Paid: <%= @all_orders.paid.count %> </p>
+<p>Cancelled: <%= @all_orders.cancelled.count %> </p>
+<p>Completed: <%= @all_orders.completed.count %> </p>
+
+
+<%= form_tag({}, {:method => :get}) do %>
+  <%= select_tag :order_status, options_for_select(Order.statuses.keys), :onchange => "this.form.submit();" %>
+<% end %>
 
 <ul>
   <% @orders.each do |order| %>
