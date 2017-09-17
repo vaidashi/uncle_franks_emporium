@@ -6,7 +6,7 @@ feature "When a visitor adds an item to their cart and visits their cart" do
     item = create(:item)
     visit item_path(item)
 
-    click_on "Add to Cart"
+    click_on "add_shopping_cart"
 
     click_on "shopping_cart"
 
