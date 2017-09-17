@@ -1,0 +1,21 @@
+<h1>Order show page for Order#<%= @order.id %></h1>
+
+
+<ul>
+<li> <%= @order.user.name %></li>
+<li> <%= @order.user.address %></li>
+<li> Order placed on <%= @order.created_at %></li>
+
+<ul>
+  <% @order.items.each do |item| %>
+<li> <%= link_to "#{item.name}", item_path(item)  %></li>
+<li><%= number_to_currency(item.price) %></li>
+<li>Quantity  <%= @order.item_count(item.id) %> </li>
+<li>Item subtotal <%= number_to_currency(@order.item_subtotal(item.id)) %></li>
+<% end %>
+</ul>
+
+<li> Total amount of items <%= @order.items.count %></li>
+<li>Total Order Cost <%= number_to_currency(@order.total_price) %></li>
+<li class= "Status_#{@order.status}"> Current Order Status <%= @order.status %></li>
+</ul>

@@ -5,6 +5,11 @@ FactoryGirl.define do
     end
     name "Dennis"
     password "MyPassword"
+    street "123 Main St"
+    city "Aspen"
+    state "California"
+    country "Texas"
+    zip_code "12311"
 
     factory :user_with_orders do
       after(:create) do |user|

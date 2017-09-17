@@ -72,7 +72,7 @@ Item.create(name: "Tetris Mattress", description: Faker::Hipster.paragraph, pric
   name = Faker::FamilyGuy.character
   username = "#{name.gsub(/\s+/, "").downcase}"
   password = name.split.first.downcase
-  User.create(name: name, username: username, password: password)
+  User.create(name: name, username: username, password: password, street: Faker::Address.street_address, city: Faker::Address.city, state: Faker::Address.state_abbr, country: Faker::Address.country, zip_code: Faker::Address.zip)
   puts "Created #{name}'s account'"
 end
 

@@ -19,4 +19,19 @@ class Order < ApplicationRecord
     order.save
   end
 
+  def total_price
+    total_price = 0
+    self.items.each do |item|
+      total_price += item.price * item_count(item.id)
+    end
+    total_price
+  end
+
+  def item_count(item_id)
+    ItemOrder.where(order_id: self.id, item_id: item_id).count
+  end
+
+  def item_subtotal(item_id)
+    Item.find(item_id).price * item_count(item_id)
+  end
 end
