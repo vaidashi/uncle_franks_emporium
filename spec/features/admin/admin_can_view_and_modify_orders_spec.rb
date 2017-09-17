@@ -64,23 +64,13 @@ feature "as a logged in admin" do
     admin   = create(:user, role: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-    # user   = create(:user_with_orders)
-    #
-    # user.orders.each do |order|
-    #   order.items << create_list(:item, 3)
-    # end
-
     user = create(:user)
     order1 = Order.create(user: user, status: "paid")
     order2 = Order.create(user: user)
     order3 = Order.create(user: user)
 
-    # Order.update(19, status: "paid")
-    # user.orders.first.update(status: "paid")
     visit admin_dashboard_index_path
 
-    # binding.pry
-    # save_and_open_page
     expect(page).to have_button("Cancel")
     expect(page).to have_button("Mark as Paid")
     expect(page).to have_button("Mark as Completed")
@@ -90,8 +80,6 @@ feature "as a logged in admin" do
     end
 
     expect(Order.find(order1.id).status).to eq("completed")
-
-    save_and_open_page
 
     within(".order#{order2.id}") do
       click_on "Cancel"
