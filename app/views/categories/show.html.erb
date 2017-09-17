@@ -5,7 +5,7 @@
   <div class="col s12 m6 l3">
     <div class="card medium">
       <div class="card-image">
-        <img src="/assets/<%=item.image_path%>">
+        <%= image_tag item.image_path %>
       </div>
       <div class="card-content">
         <p class="indextitle"> <%=item.name%>: <%= number_to_currency(item.price) %> </p>
