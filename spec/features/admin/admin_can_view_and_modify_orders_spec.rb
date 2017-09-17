@@ -64,45 +64,52 @@ feature "as a logged in admin" do
     admin   = create(:user, role: 1)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
 
-    user   = create(:user_with_orders)
+    # user   = create(:user_with_orders)
+    #
+    # user.orders.each do |order|
+    #   order.items << create_list(:item, 3)
+    # end
 
-    user.orders.each do |order|
-      order.items << create_list(:item, 3)
-    end
+    user = create(:user)
+    order1 = Order.create(user: user, status: "paid")
+    order2 = Order.create(user: user)
+    order3 = Order.create(user: user)
 
-    user.orders.last.status = "paid"
-
+    # Order.update(19, status: "paid")
+    # user.orders.first.update(status: "paid")
     visit admin_dashboard_index_path
 
     # binding.pry
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_button("Cancel")
     expect(page).to have_button("Mark as Paid")
     expect(page).to have_button("Mark as Completed")
 
-    # within(class: "order1") do
+    within(".order#{order1.id}") do
       click_on "Mark as Completed"
-    # end
+    end
 
-    expect(user.orders.first.status).to eq("completed")
+    expect(Order.find(order1.id).status).to eq("completed")
 
-    within("order2") do
+    save_and_open_page
+
+    within(".order#{order2.id}") do
       click_on "Cancel"
     end
 
-    expect(user.orders.second.status).to eq("cancelled")
+    expect(Order.find(order2.id).status).to eq("cancelled")
 
-    within("order3") do
+    within(".order#{order3.id}") do
       click_on "Mark as Paid"
     end
 
-    expect(user.orders.third.status).to eq("paid")
+    expect(Order.find(order3.id).status).to eq("paid")
 
-    within("order3") do
+    within(".order#{order3.id}") do
       click_on "Cancel"
     end
 
-    expect(user.orders.third.status).to eq("cancelled")
+    expect(Order.find(order3.id).status).to eq("cancelled")
   end
 
 
