@@ -210,6 +210,10 @@
         1,
         1,
         null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/jayphodges/turing/2module/projects/uncle_franks_emporium/app/helpers/admin_helper.rb": [
@@ -391,6 +395,6 @@
         null
       ]
     },
-    "timestamp": 1505674965
+    "timestamp": 1505676928
   }
 }

@@ -23,8 +23,8 @@ feature "as a logged in admin" do
 
     visit '/admin/dashboard'
 
-    expect(page).to have_link(user1.orders.first.id)
-    expect(page).to have_link(user2.orders.first.id)
+    expect(page).to have_link("Order: #{user1.orders.first.id}")
+    expect(page).to have_link("Order: #{user2.orders.first.id}")
     expect(page).to have_content("Ordered: 6")
     expect(page).to have_content("Cancelled: 1")
     expect(page).to have_content("Paid: 1")
@@ -70,17 +70,19 @@ feature "as a logged in admin" do
       order.items << create_list(:item, 3)
     end
 
-    user.orders.first.status = "paid"
+    user.orders.last.status = "paid"
 
     visit admin_dashboard_index_path
 
-    expect(page).to have_link("Cancel")
-    expect(page).to have_link("Mark as Paid")
-    expect(page).to have_link("Mark as Completed")
+    # binding.pry
+    save_and_open_page
+    expect(page).to have_button("Cancel")
+    expect(page).to have_button("Mark as Paid")
+    expect(page).to have_button("Mark as Completed")
 
-    within("order1") do
+    # within(class: "order1") do
       click_on "Mark as Completed"
-    end
+    # end
 
     expect(user.orders.first.status).to eq("completed")
 

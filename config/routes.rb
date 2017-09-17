@@ -29,4 +29,8 @@ Rails.application.routes.draw do
   put '/cart/:id', to: "carts#update", as: "cart_add_item"
   get '/:category_name', to: 'categories#show'
 
+  put '/admin/dashboard/:order_id', to: "orders#cancel", as: "order_cancel"
+  put '/admin/dashboard/:order_id', to: "orders#paid", as: "order_paid"
+  put '/admin/dashboard/:order_id', to: "orders#completed", as: "order_completed"
+
 end
