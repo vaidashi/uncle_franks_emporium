@@ -10,6 +10,8 @@
   <% @order.items.each do |item| %>
 <li> <%= link_to "#{item.name}", item_path(item)  %></li>
 <li><%= number_to_currency(item.price) %></li>
+<li>Quantity  <%= @order.item_count(item.id) %> </li>
+<li>Item subtotal <%= number_to_currency(@order.item_subtotal(item.id)) %></li>
 <% end %>
 </ul>
 
