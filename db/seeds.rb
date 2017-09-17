@@ -63,10 +63,10 @@ Item.create(name: "Luxury Bath Mat", description: Faker::Hipster.paragraph, pric
 Item.create(name: "Shower Curtain with edge accents", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "bath4.jpg")
 
 # -----------------------------Mattresses
-Item.create(name: "Sleep mat for large dog or small child", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Mattresses"), image_path: "Mattresses1.jpg")
-Item.create(name: "This item speaks for itself", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "Mattresses2.jpg")
-Item.create(name: "Single Mattress with Deulxe Rorschach pattern", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "Mattresses3.jpg")
-Item.create(name: "Tetris Mattress", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Mattresses"), image_path: "Mattresses4.jpg", active: false)
+Item.create(name: "Sleep mat for large dog or small child", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Mattresses"), image_path: "mattresses1.jpg")
+Item.create(name: "This item speaks for itself", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "mattresses2.jpg")
+Item.create(name: "Single Mattress with Deulxe Rorschach pattern", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Bath"), image_path: "mattresses3.jpg")
+Item.create(name: "Tetris Mattress", description: Faker::Hipster.paragraph, price: rand(100..1000), category: Category.find_by(name: "Mattresses"), image_path: "mattresses4.jpg", active: false)
 
 # -----------------------------Users
 15.times do |users|
