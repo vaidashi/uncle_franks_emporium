@@ -9,6 +9,7 @@ Item.destroy_all
 Category.destroy_all
 Order.destroy_all
 User.destroy_all
+ItemOrder.destroy_all
 
 CATEGORIES = ["Bath", "Furniture", "Kitchen", "Mattresses", "Seasonal"]
 
