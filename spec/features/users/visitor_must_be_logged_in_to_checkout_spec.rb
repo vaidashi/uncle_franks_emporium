@@ -7,7 +7,7 @@ feature "visitor can create account" do
 
     visit '/items'
 
-    click_on "Add to Cart"
+    click_on "add_shopping_cart"
 
     click_on "shopping_cart"
 

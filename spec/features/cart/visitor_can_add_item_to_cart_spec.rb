@@ -5,7 +5,7 @@ feature "When a visitor adds an item to their cart" do
     create(:item)
     visit items_path
 
-    click_on "Add to Cart"
+    click_on "add_shopping_cart"
 
     expect(page).to have_content("Successfully added")
   end
@@ -15,8 +15,8 @@ feature "When a visitor adds an item to their cart" do
     total_price = item.price * 2
     visit item_path(item)
 
-    click_on "Add to Cart"
-    click_on "Add to Cart"
+    click_on "add_shopping_cart"
+    click_on "add_shopping_cart"
 
     click_on "shopping_cart"
 
