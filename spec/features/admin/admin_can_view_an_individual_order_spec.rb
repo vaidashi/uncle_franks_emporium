@@ -19,7 +19,7 @@ feature "as a logged in admin" do
     expect(page).to have_content(user1.address)
     expect(page).to have_content(user1.orders.first.created_at)
     expect(page).to have_link(user1.orders.first.items.first.name)
-    expect(page).to have_content(user1.orders.first.count)
+    expect(page).to have_content(user1.orders.first.items.count)
     expect(page).to have_content(user1.orders.first.items.first.price)
     expect(page).to have_content(user1.orders.first.items.second.price)
     expect(page).to have_content(user1.orders.first.items.third.price)

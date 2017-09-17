@@ -19,4 +19,13 @@ class Order < ApplicationRecord
     order.save
   end
 
+  def total_price
+    total_price = 0
+      self.items.each do |item|
+        total_price += item.price
+        end
+    total_price
+  end
+
+
 end
