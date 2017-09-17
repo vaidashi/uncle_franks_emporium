@@ -14,12 +14,12 @@
       </div>
       <div class="card-action">
         <% if item.active %>
-        <%= button_to "Add to Cart", carts_path(item_id: item.id), class: "btn btn-danger" %>
+        <%= button_to 'add_shopping_cart', carts_path(item_id: item.id), class: "btn-large black large material-icons" %>
         <% else %>
-        <%= button_to "Item Retired", "#", class: "btn btn-danger disabled" %>
+        <%= button_to "add_shopping_cart", "#", class: "btn-large material-icons disabled" %>
         <% end %>
         <div class="space"></div>
-        <%= button_to "View Item", item_path(item.id), class: "btn btn-danger small", method: 'get' %>
+        <%= button_to "pageview", item_path(item.id), class: "btn-large black large material-icons" , method: 'get' %>
       </div>
     </div>
   </div>
