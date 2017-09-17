@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ItemOrder.destroy_all
 Item.destroy_all
 Category.destroy_all
 Order.destroy_all
 User.destroy_all
-ItemOrder.destroy_all
 
 CATEGORIES = ["Bath", "Furniture", "Kitchen", "Mattresses", "Seasonal"]
 
