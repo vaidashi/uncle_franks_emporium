@@ -29,4 +29,8 @@ Rails.application.routes.draw do
   put '/cart/:id', to: "carts#update", as: "cart_add_item"
   get '/:category_name', to: 'categories#show'
 
+  post '/orders/cancel/:order_id', to: "orders#cancel", as: "order_cancel"
+  post '/orders/paid/:order_id', to: "orders#paid", as: "order_paid"
+  post '/orders/completed/:order_id', to: "orders#completed", as: "order_completed"
+
 end
