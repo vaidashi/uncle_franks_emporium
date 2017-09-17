@@ -60,4 +60,48 @@ feature "as a logged in admin" do
     expect(page).to have_content("Order: #{user1.orders.last.id}")
   end
 
+  scenario "I can change the status of the order" do
+    admin   = create(:user, role: 1)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+
+    user   = create(:user_with_orders)
+
+    user.orders.each do |order|
+      order.items << create_list(:item, 3)
+    end
+
+    user.orders.first.status = "paid"
+
+    visit admin_dashboard_index_path
+
+    expect(page).to have_link("Cancel")
+    expect(page).to have_link("Mark as Paid")
+    expect(page).to have_link("Mark as Completed")
+
+    within("order1") do
+      click_on "Mark as Completed"
+    end
+
+    expect(user.orders.first.status).to eq("completed")
+
+    within("order2") do
+      click_on "Cancel"
+    end
+
+    expect(user.orders.second.status).to eq("cancelled")
+
+    within("order3") do
+      click_on "Mark as Paid"
+    end
+
+    expect(user.orders.third.status).to eq("paid")
+
+    within("order3") do
+      click_on "Cancel"
+    end
+
+    expect(user.orders.third.status).to eq("cancelled")
+  end
+
+
 end
