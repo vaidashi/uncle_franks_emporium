@@ -1,0 +1,30 @@
+<h1>All Items</h1>
+
+<div class="row">
+  <% @items.each do |item| %>
+  <div class="col s12 m6 l3">
+    <div class="card medium">
+      <div class="card-image">
+        <%= image_tag item.image_path %>
+        <span class="card-title"></span>
+      </div>
+      <div class="card-content">
+        <p class="indextitle"> <%=item.name%>: <%= number_to_currency(item.price) %> </p>
+        <p><%= item.description %></p>
+      </div>
+      <div class="card-action">
+        <% if item.active %>
+        <%= button_to 'add_shopping_cart', carts_path(item_id: item.id), class: "btn-large black large material-icons" %>
+        <% else %>
+        <%= button_to "add_shopping_cart", "#", class: "btn-large material-icons disabled" %>
+        <% end %>
+        <div class="space"></div>
+        <%= button_to "pageview", item_path(item.id), class: "btn-large black large material-icons" , method: 'get' %>
+
+        <%= button_to 'Edit', edit_admin_item_path(item), class: "btn-large black large material-icons" %>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
