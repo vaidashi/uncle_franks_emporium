@@ -24,6 +24,7 @@ class OrdersController < ApplicationController
     else
     order = Order.create_from_items(items, current_user)
     flash[:good_message] = "Order was successfully placed"
+    session.delete(:cart)
     redirect_to orders_path
     end
   end
