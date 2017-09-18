@@ -12,7 +12,7 @@ feature "from the admin dashboard" do
     click_on "All Items"
 
     expect(current_path).to eq("/admin/items")
-    
+
 
     expect(page).to have_content(item1.name)
     expect(page).to have_content(item2.name)
@@ -20,6 +20,6 @@ feature "from the admin dashboard" do
     expect(page).to have_content(item1.description)
     expect(page).to have_content(item2.description)
 
-    expect(page).to have_button("Edit")
+    expect(page).to have_button("edit")
   end
 end

@@ -9,7 +9,7 @@ feature "from the items index and admin" do
 
     visit admin_items_path
 
-    click_on "Edit", :match => :first
+    click_on "edit", :match => :first
 
     expect(current_path).to eq(edit_admin_item_path(item1))
     fill_in "item[name]", with: "NewGrossCouch"
