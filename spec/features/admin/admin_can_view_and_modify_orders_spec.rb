@@ -76,25 +76,25 @@ feature "as a logged in admin" do
     expect(page).to have_button("Mark as Completed")
 
     within(".order#{order1.id}") do
-      click_on "Mark as Completed"
+      click_on "Mark as Completed", :match => :first
     end
 
     expect(Order.find(order1.id).status).to eq("completed")
 
     within(".order#{order2.id}") do
-      click_on "Cancel"
+      click_on "Cancel", :match => :first
     end
 
     expect(Order.find(order2.id).status).to eq("cancelled")
 
     within(".order#{order3.id}") do
-      click_on "Mark as Paid"
+      click_on "Mark as Paid", :match => :first
     end
 
     expect(Order.find(order3.id).status).to eq("paid")
 
     within(".order#{order3.id}") do
-      click_on "Cancel"
+      click_on "Cancel", :match => :first
     end
 
     expect(Order.find(order3.id).status).to eq("cancelled")
