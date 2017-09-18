@@ -16,12 +16,12 @@ feature "from the items index" do
     fill_in "item[name]", with: "NewGrossCouch"
     fill_in "item[description]", with: "Newdescription"
     fill_in "item[price]", with: 100.0
-    fill_in "item[category]", with: "#{category.name}"
-    fill_in "item[image_path]", with: "uncle_frank.jpg"
 
+    page.select "#{category.name}", :from => "item_category_id"
+    fill_in "item[image_path]", with: "uncle_frank.jpg"
     click_on("Create")
 
-    expect(current_path).to eq(items_path)
+    expect(current_path).to eq(item_path(Item.first))
     expect(Item.count).to eq(1)
     expect(page).to have_content("NewGrossCouch")
   end
