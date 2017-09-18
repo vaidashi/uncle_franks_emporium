@@ -3,6 +3,20 @@ class Admin::ItemsController < Admin::BaseController
     @items = Item.all
   end
 
+  def new
+    @item = Item.new
+  end
+
+  def create
+    @item = Item.new(item_params)
+    if @item.save
+      flash[:good_message] = "Successfully added a new item to your garbage shop"
+      redirect_to item_path(@item)
+    else
+      render :new
+    end
+  end
+
   def edit
     @item = Item.find(params[:id])
     render :layout => false
@@ -19,7 +33,7 @@ class Admin::ItemsController < Admin::BaseController
 
   private
   def item_params
-    params.require(:item).permit(:name, :description, :price, :image_path, :active)
+    params.require(:item).permit(:name, :description, :price, :image_path, :active, :category_id)
   end
 
 end
