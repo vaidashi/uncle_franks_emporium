@@ -74,7 +74,7 @@
         <div class="divider"></div>
       </li>
       <br>
-      <% if current_user.admin? %>
+      <% if current_user && current_user.admin? %>
         <li>
           <h5><%= link_to "All Items", admin_items_path, class: "white-text" %></h5>
         </li>
