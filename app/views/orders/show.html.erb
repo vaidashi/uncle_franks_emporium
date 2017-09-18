@@ -14,3 +14,5 @@
 Order Status <%= @order.status.humanize %><br>
 Order Placed <%= (@order.created_at) %>
 Order Total  <%#= @order.total_price %>
+
+<%= button_to "Back to Orders", orders_path, class: "btn-large black large white-text", method: "get" %>

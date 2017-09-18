@@ -19,3 +19,6 @@
 <li>Total Order Cost <%= number_to_currency(@order.total_price) %></li>
 <li class= "Status_#{@order.status}"> Current Order Status <%= @order.status %></li>
 </ul>
+
+
+<%= button_to "Return to Dashboard", admin_dashboard_index_path, class: "btn-large black large white-text", method: "get" %>
