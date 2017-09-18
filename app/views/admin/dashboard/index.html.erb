@@ -1,16 +1,17 @@
 <h3>Admin Dashboard</h3>
 
-<%= link_to "All Items", admin_items_path %>
-
 <p>Ordered: <%= @all_orders.ordered.count %> </p>
 <p>Paid: <%= @all_orders.paid.count %> </p>
 <p>Cancelled: <%= @all_orders.cancelled.count %> </p>
 <p>Completed: <%= @all_orders.completed.count %> </p>
 
-
-<%= form_tag({}, {:method => :get}) do %>
-  <%= select_tag :order_status, options_for_select(Order.statuses.keys), :onchange => "this.form.submit();" %>
+<div class="row">
+<%= form_tag({}, {:class => "status-form col s2", :method => :get}) do %>
+  <%= label_tag "Status:" %>
+  <%= select_tag :order_status, options_for_select(["Filter by Order Status", "all", "ordered", "paid", "cancelled", "complete"]), :onchange => "this.form.submit();" %>
+  <!-- <%= select_tag :order_status, options_for_select(Order.statuses.keys), :onchange => "this.form.submit();" %> -->
 <% end %>
+</div>
 
 <ul>
   <% @orders.each do |order| %>
