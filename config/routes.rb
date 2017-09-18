@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     resources :dashboard, only: [:index]
     resources :users, only: [:edit, :update]
     resources :orders, only: [:show]
-    resources :items, only: [:index, :edit]
+    resources :items, only: [:index, :edit, :update]
     # get '/dashboard', to: "admindashboard#dashboard"
   end
 
