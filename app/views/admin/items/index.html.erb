@@ -21,9 +21,9 @@
         <%= button_to "add_shopping_cart", "#", class: "btn-large material-icons disabled" %>
         <% end %>
         <div class="space"></div>
-        <%= button_to "pageview", item_path(item.id), class: "btn-large black large material-icons" , method: 'get' %>
-        <div class="space"></div>
         <%= button_to 'edit', edit_admin_item_path(item), class: "btn-large black large material-icons", method: 'get' %>
+        <div class="space"></div>
+        <%= button_to "info_outline", item_path(item.id), class: "btn-large black large material-icons" , method: 'get' %>
 
       </div>
     </div>
