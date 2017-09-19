@@ -13,5 +13,8 @@
     <%= button_to "Item Retired", "#", class: "btn btn-danger disabled" %>
     <% end %>
 </ul>
-
+<% if current_admin? %>
+<%= button_to "Item Index", admin_items_path, class: "btn-large black large white-text", method: "get" %>
+<% else %>
 <%= button_to "Item Index", items_path, class: "btn-large black large white-text", method: "get" %>
+<% end %>

@@ -19,7 +19,7 @@ class Admin::ItemsController < Admin::BaseController
 
   def edit
     @item = Item.find(params[:id])
-    render :layout => false
+    # render :layout => false
   end
 
   def update
