@@ -5,4 +5,8 @@ class Item < ApplicationRecord
 
   validates :name, presence: :true, uniqueness: :true
   validates :description, :price, presence: :true
+
+  def self.random_item
+    find(rand(1..12))
+  end
 end
