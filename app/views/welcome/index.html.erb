@@ -18,7 +18,7 @@
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
-
+    <% if @item3 %>
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
 
@@ -45,6 +45,8 @@
             <p> <%= @item3.description %>  <%= button_to "info_outline", item_path(@item3.id), class: "btn-large black large material-icons" , method: 'get' %></p>
           </div>
       </div>
+
+      <% end %>
 
     </div>
 
