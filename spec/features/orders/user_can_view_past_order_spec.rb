@@ -27,6 +27,6 @@ feature 'as a user when I visit /orders' do
     expect(page).to have_content(user.orders.first.status.humanize)
     # expect(page).to have_content("$150.00")
     expect(page).to have_content("$50.00")
-    expect(page).to have_content(user.orders.first.created_at)
+    expect(page).to have_content(user.orders.first.created_at.to_formatted_s(:long_ordinal))
   end
 end

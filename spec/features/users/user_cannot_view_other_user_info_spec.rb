@@ -18,7 +18,7 @@ feature "as a logged in user" do
 
     visit "/orders"
 
-    expect(page).to_not have_content(user2.orders.first.id)
+    expect(page).to_not have_link(user2.orders.first.id)
 
     visit "/orders/#{user2.orders.first.id}"
 
