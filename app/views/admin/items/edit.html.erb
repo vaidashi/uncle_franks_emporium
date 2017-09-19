@@ -10,14 +10,13 @@
   <%= f.label :image_path %>
   <%= f.text_field :image_path %>
 
-  <%= f.radio_button  :active, false, :value => false  %>
-  <%= f.label "retired", "retired"%>
+  <%= f.radio_button  :active, false, :value => false %>
+  <%= f.label "retired", "retired" %>
 
   <%= f.radio_button :active, true %>
   <%= f.label "active", "active" %>
-
-
-
-<br><br><br>
+<br>
+<br>
+<br>
   <%= f.submit %>
 <% end %>
