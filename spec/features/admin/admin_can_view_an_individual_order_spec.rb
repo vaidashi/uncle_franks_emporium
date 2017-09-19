@@ -17,7 +17,7 @@ feature "as a logged in admin" do
 
     expect(page).to have_content(user1.name)
     expect(page).to have_content(user1.address)
-    expect(page).to have_content(user1.orders.first.created_at)
+    expect(page).to have_content(user1.orders.first.created_at.to_formatted_s(:long_ordinal))
     expect(page).to have_link(user1.orders.first.items.first.name)
     expect(page).to have_content(user1.orders.first.items.count)
     expect(page).to have_content(user1.orders.first.items.first.price)
@@ -25,6 +25,6 @@ feature "as a logged in admin" do
     expect(page).to have_content(user1.orders.first.items.third.price)
     expect(page).to have_content("$150.00")
     expect(page).to have_content("$50.00")
-    expect(page).to have_content(user1.orders.first.status)
+    expect(page).to have_content(user1.orders.first.status.humanize)
   end
 end
