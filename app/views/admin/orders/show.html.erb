@@ -2,23 +2,25 @@
 
 
 <ul>
+<div class="divider"></div>
 <li> <%= @order.user.name %></li>
-<li> <%= @order.user.address %></li>
-<li> Order placed on <%= @order.created_at %></li>
+<li> <%= @order.user.address %></li><br>
+<div class="divider"></div>
 
-<ul>
-  <% @order.items.each do |item| %>
-<li> <%= link_to "#{item.name}", item_path(item)  %></li>
-<li><%= number_to_currency(item.price) %></li>
-<li>Quantity  <%= @order.item_count(item.id) %> </li>
-<li>Item subtotal <%= number_to_currency(@order.item_subtotal(item.id)) %></li>
+<p>Order #<%= @order.id %>
+  <ul>
+<% @order.items.each do |item| %>
+<li><%= link_to item.name, item_path(item) %> <%= number_to_currency(item.price) %></li>
 <% end %>
 </ul>
+</p>
 
-<li> Total amount of items <%= @order.items.count %></li>
-<li>Total Order Cost <%= number_to_currency(@order.total_price) %></li>
-<li class= "Status_#{@order.status}"> Current Order Status <%= @order.status %></li>
-</ul>
+
+<strong>Order Status:</strong>  <%= @order.status.humanize %><br>
+<strong>Order Placed:</strong>  <%= (@order.created_at.to_formatted_s(:long_ordinal)) %><br>
+<strong>Order Updated:</strong>  <%= (@order.updated_at.to_formatted_s(:long_ordinal)) %><br><br />
+<strong>Order Total: </strong>  <%= number_to_currency(@order.total_price) %><br>
+<br>
 
 
 <%= button_to "Return to Dashboard", admin_dashboard_index_path, class: "btn-large black large white-text", method: "get" %>

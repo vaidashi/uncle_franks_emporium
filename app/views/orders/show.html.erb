@@ -1,18 +1,16 @@
-
 <h3>Order show page</h3>
 
-
-<p>
-
+<p>Order #<%= @order.id %>
+  <ul>
 <% @order.items.each do |item| %>
-<%= link_to item.name, item_path(item) %><br>
-<%= number_to_currency(item.price) %>
+<li><%= link_to item.name, item_path(item) %> <%= number_to_currency(item.price) %></li>
 <% end %>
+</ul>
 </p>
 
 
-Order Status <%= @order.status.humanize %><br>
-Order Placed <%= (@order.created_at) %>
-Order Total  <%#= @order.total_price %>
-
+<strong>Order Status:</strong>  <%= @order.status.humanize %><br>
+<strong>Order Placed:</strong>  <%= (@order.created_at.to_formatted_s(:long_ordinal)) %><br><br />
+<strong>Order Total: </strong>  <%= number_to_currency(@order.total_price) %><br>
+<br>
 <%= button_to "Back to Orders", orders_path, class: "btn-large black large white-text", method: "get" %>
