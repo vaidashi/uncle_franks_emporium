@@ -9,20 +9,20 @@ class Admin::ItemsController < Admin::BaseController
 
   def create
     @item = Item.new(item_params)
-    if params[:item][:image_path] == ""
+    if params[:item][:image_path] == "" || params[:item][:image_path].nil?
       @item.image_path = "garbage.jpg"
     end
     if @item.save
       flash[:good_message] = "Successfully added a new item to your garbage shop"
       redirect_to item_path(@item)
     else
-      render :new
+      flash[:bad_message] = "Creation failed"
+      redirect_to new_admin_item_path
     end
   end
 
   def edit
     @item = Item.find(params[:id])
-    # render :layout => false
   end
 
   def update
