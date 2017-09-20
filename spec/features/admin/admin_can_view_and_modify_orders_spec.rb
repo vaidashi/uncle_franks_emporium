@@ -55,11 +55,21 @@ feature "as a logged in admin" do
 
     visit admin_dashboard_index_path(order_status: "cancelled")
 
-    select "cancelled", :from => "order_status"
-
     expect(page).to_not have_content("Order: #{user1.orders.first.id}")
     expect(page).to_not have_content("Order: #{user2.orders.second.id}")
     expect(page).to have_content("Order: #{user1.orders.last.id}")
+
+    visit admin_dashboard_index_path(order_status: "completed")
+
+    expect(page).to_not have_content("Order: #{user1.orders.first.id}")
+    expect(page).to have_content("Order: #{user2.orders.fourth.id}")
+    expect(page).to_not have_content("Order: #{user1.orders.last.id}")
+
+    visit admin_dashboard_index_path(order_status: "paid")
+
+    expect(page).to_not have_content("Order: #{user1.orders.first.id}")
+    expect(page).to have_content("Order: #{user2.orders.last.id}")
+    expect(page).to_not have_content("Order: #{user1.orders.last.id}")
   end
 
   scenario "I can change the status of the order" do
