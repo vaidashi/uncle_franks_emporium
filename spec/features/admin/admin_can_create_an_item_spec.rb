@@ -27,6 +27,7 @@ feature "from the items index" do
   end
 
   scenario "an admin can create an item without specifying image" do
+    Item.destroy_all
     admin   = create(:user, role: 1)
     category = create(:category)
 
