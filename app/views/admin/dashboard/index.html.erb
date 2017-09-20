@@ -42,7 +42,7 @@
           <td><%= button_to "Mark as Paid", order_paid_path(order), class: "waves-effect waves-light btn black" %></td>
           <td><%= button_to "Mark as Completed", order_completed_path(order), class: "waves-effect waves-light btn disabled" %></td>
         <% elsif order.status == "paid" %>
-          <td><%= button_to "Cancel", order_cancel_path(order), class: "waves-effect waves-light btn disabled"  %></td>
+          <td><%= button_to "Cancel", order_cancel_path(order), class: "waves-effect waves-light btn black"  %></td>
           <td><%= button_to "Mark as Paid", order_paid_path(order), class: "waves-effect waves-light btn disabled"  %></td>
           <td><%= button_to "Mark as Completed", order_completed_path(order), class: "waves-effect waves-light btn black"  %></td>
         <% else %>
