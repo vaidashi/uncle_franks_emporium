@@ -18,7 +18,7 @@ feature "from the items index" do
     fill_in "item[price]", with: 100.0
 
     page.select "#{category.name}", :from => "item_category_id"
-    fill_in "item[image_path]", with: "uncle_frank.jpg"
+    fill_in "item[image_path]", with: "garbage.jpg"
     click_on("Create")
 
     expect(current_path).to eq(item_path(Item.first))
@@ -27,7 +27,6 @@ feature "from the items index" do
   end
 
   scenario "an admin can create an item without specifying image" do
-    Item.destroy_all
     admin   = create(:user, role: 1)
     category = create(:category)
 
