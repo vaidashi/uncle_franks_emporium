@@ -27,6 +27,9 @@ class Admin::ItemsController < Admin::BaseController
 
   def update
     @item = Item.find(params[:id])
+    if !params[:item][:active]
+      @item.active = false
+    end
     if @item.update(item_params)
       redirect_to item_path(@item)
     else

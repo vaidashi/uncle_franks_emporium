@@ -1,6 +1,5 @@
 <h2>Edit Item</h2>
-
-<%= form_for [:admin, @item] do |f| %>
+<%= simple_form_for [:admin, @item] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -10,13 +9,7 @@
   <%= f.label :image_path %>
   <%= f.text_field :image_path %>
 
-  <%= f.radio_button  :active, false, :value => false %>
-  <%= f.label "retired", "retired" %>
-
-  <%= f.radio_button :active, true %>
-  <%= f.label "active", "active" %>
-<br>
-<br>
-<br>
+  <%= f.input :active, as: :boolean, checked_value: true, unchecked_value: false, method: "post", id: "activebutton" %>
+  <br />
   <%= f.submit %>
 <% end %>
