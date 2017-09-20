@@ -652,11 +652,11 @@
         null,
         null,
         1,
-        41,
+        42,
         null,
         null,
         1,
-        41,
+        42,
         null,
         null,
         1,
@@ -668,7 +668,7 @@
         null,
         null,
         1,
-        44,
+        45,
         null,
         null
       ],
@@ -677,7 +677,7 @@
         1,
         null,
         1,
-        41,
+        42,
         null,
         null,
         1,
@@ -767,7 +767,29 @@
         1,
         null,
         1,
-        2,
+        3,
+        null,
+        null
+      ],
+      "/Users/vaidashi/turing/2module/projects2/uncle_franks_emporium/app/controllers/admin/dashboard_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
         null,
         null
       ],
@@ -922,6 +944,6 @@
         null
       ]
     },
-    "timestamp": 1505935400
+    "timestamp": 1505936021
   }
 }
