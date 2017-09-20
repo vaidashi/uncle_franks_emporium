@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
 
   def index
     if current_user
-      @orders = Order.where(user_id: current_user.id)
+      @orders = Order.where(user_id: current_user.id).order(id: :desc)
     else
       redirect_to login_path
     end
