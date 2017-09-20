@@ -24,4 +24,23 @@ feature "as a logged in user" do
 
     expect(page).to have_content("The page you were looking for doesn't exist")
   end
+
+  scenario "they can redirected if logged in" do
+    user1   = create(:user_with_orders)
+
+    user1.orders.each do |order|
+      order.items << create_list(:item, 3)
+    end
+
+    user2   = create(:user_with_orders)
+
+    user2.orders.each do |order|
+      order.items << create_list(:item, 3)
+    end
+
+    visit "/orders"
+
+    expect(page).to have_content("Login")
+    expect(page).to have_content("The page you were looking for doesn't exist")
+  end
 end

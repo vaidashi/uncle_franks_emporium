@@ -3,7 +3,9 @@ require 'rails_helper'
 feature "as a logged in admin" do
   scenario "I can view orders on the dashboard" do
     admin   = create(:user, role: 1)
-    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+
+    allow_any_instance_of(ApplicationController).to receive(
+    :current_user).and_return(admin)
 
     user1   = create(:user_with_orders)
 
@@ -53,10 +55,32 @@ feature "as a logged in admin" do
 
     visit admin_dashboard_index_path(order_status: "cancelled")
 
-    select "cancelled", :from => "order_status"
-
     expect(page).to_not have_content("Order: #{user1.orders.first.id}")
     expect(page).to_not have_content("Order: #{user2.orders.second.id}")
+    expect(page).to have_content("Order: #{user1.orders.last.id}")
+
+    visit admin_dashboard_index_path(order_status: "completed")
+
+    expect(page).to_not have_content("Order: #{user1.orders.first.id}")
+    expect(page).to have_content("Order: #{user2.orders.fourth.id}")
+    expect(page).to_not have_content("Order: #{user1.orders.last.id}")
+
+    visit admin_dashboard_index_path(order_status: "paid")
+
+    expect(page).to_not have_content("Order: #{user1.orders.first.id}")
+    expect(page).to have_content("Order: #{user2.orders.last.id}")
+    expect(page).to_not have_content("Order: #{user1.orders.last.id}")
+
+    visit admin_dashboard_index_path(order_status: "ordered")
+
+    expect(page).to have_content("Order: #{user1.orders.first.id}")
+    expect(page).to_not have_content("Order: #{user2.orders.last.id}")
+    expect(page).to_not have_content("Order: #{user1.orders.last.id}")
+
+    visit admin_dashboard_index_path(order_status: "all")
+
+    expect(page).to have_content("Order: #{user1.orders.first.id}")
+    expect(page).to have_content("Order: #{user2.orders.last.id}")
     expect(page).to have_content("Order: #{user1.orders.last.id}")
   end
 

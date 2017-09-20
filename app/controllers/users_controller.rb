@@ -1,15 +1,10 @@
 class UsersController < ApplicationController
-  before_action :require_current_user, except: [:new, :create]
+  before_action :require_current_user, except: [:create]
 
   def show
 
   end
 
-  def new
-    @user = User.new
-
-    render :layout=>false
-  end
 
   def edit
    if current_user.id != params[:id].to_i
@@ -34,7 +29,7 @@ class UsersController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:bad_message] = "Update failed"
-      render :edit
+      redirect_to edit_user_path(current_user)
     end
   end
 
