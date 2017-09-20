@@ -1,4 +1,4 @@
-<h1>Order show page for Order#<%= @order.id %></h1>
+<h1>Order#<%= @order.id %></h1>
 
 
 <ul>
@@ -7,13 +7,15 @@
 <li> <%= @order.user.address %></li><br>
 <div class="divider"></div>
 
-<p>Order #<%= @order.id %>
+<br>
   <ul>
-<% @order.items.each do |item| %>
-<li><%= link_to item.name, item_path(item) %> <%= number_to_currency(item.price) %></li>
-<% end %>
-</ul>
-</p>
+    <% @order.unique_items.each do |item| %>
+    <li><%= link_to item.name, item_path(item) %> </li>
+    <li><strong>Price: <%= number_to_currency(item.price) %></strong></li>
+    <li><strong>Quantity: </strong> <%= @order.item_count(item.id) %></li>
+    <li><strong>Sub-total: </strong> <%= number_to_currency(@order.item_subtotal(item.id)) %></li><br>
+    <% end %>
+    </ul>
 
 
 <strong>Order Status:</strong>  <%= @order.status.humanize %><br>

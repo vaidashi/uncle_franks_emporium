@@ -34,4 +34,8 @@ class Order < ApplicationRecord
   def item_subtotal(item_id)
     Item.find(item_id).price * item_count(item_id)
   end
+
+  def unique_items
+    items.uniq
+  end
 end
