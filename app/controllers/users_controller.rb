@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       redirect_to dashboard_path
     else
       flash[:bad_message] = "Update failed"
-      render :edit
+      redirect_to edit_user_path(current_user)
     end
   end
 
