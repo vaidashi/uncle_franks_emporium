@@ -1,16 +1,22 @@
-<h3>Order show page</h3>
+<h3>Order #<%= @order.id %></h3>
 
-<p>Order #<%= @order.id %>
   <ul>
-<% @order.items.each do |item| %>
-<li><%= link_to item.name, item_path(item) %> <%= number_to_currency(item.price) %></li>
+<% @order.unique_items.each do |item| %>
+<li><%= link_to item.name, item_path(item) %> </li>
+<li><strong>Price: <%= number_to_currency(item.price) %></strong></li>
+<li><strong>Quantity: </strong> <%= @order.item_count(item.id) %></li>
+<li><strong>Sub-total: </strong> <%= number_to_currency(@order.item_subtotal(item.id)) %></li><br>
 <% end %>
 </ul>
-</p>
+
+
+
 
 
 <strong>Order Status:</strong>  <%= @order.status.humanize %><br>
-<strong>Order Placed:</strong>  <%= (@order.created_at.to_formatted_s(:long_ordinal)) %><br><br />
+<strong>Order Placed:</strong>  <%= (@order.created_at.to_formatted_s(:long_ordinal)) %><br>
+<strong>Order Modified:</strong> <%= (@order.updated_at.to_formatted_s(:long_ordinal)) %><br><br />
+
 <strong>Order Total: </strong>  <%= number_to_currency(@order.total_price) %><br>
 <br>
 <%= button_to "Back to Orders", orders_path, class: "btn-large black large white-text", method: "get" %>
