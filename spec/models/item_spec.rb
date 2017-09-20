@@ -29,4 +29,15 @@ RSpec.describe Item, type: :model do
     end
   end
 
+  context "Instance Methods" do
+    it "::can return item subtotal" do
+      user = create(:user_with_orders)
+      item1 = create(:item)
+
+      user.orders.first.items << [item1, item1]
+
+      expect(user.orders.first.item_subtotal(item1.id)).to eq(100.0)
+    end
+  end
+
 end
